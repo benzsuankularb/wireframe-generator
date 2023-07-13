@@ -1,6 +1,6 @@
 import Image from "./image.png";
 
-export function Text_FormField({ label }: { label: string }) {
+export function ImageUpload_FormField({ label }: { label: string }) {
   return (
     <div className="relative text-black font-[ComicBook]">
       <div className="absolute top-2 left-2">{label}</div>

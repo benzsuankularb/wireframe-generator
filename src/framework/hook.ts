@@ -6,11 +6,13 @@ import { WireframeGeneratorContext } from "./contexts";
 export const useComponent = (name: string) => {
   const ctx = useContext(WireframeGeneratorContext);
   if (!ctx) {
+    console.error("this hook must be use under WireframeGeneratorContext");
     throw "this hook must be use under WireframeGeneratorContext";
   }
 
   const component = ctx.components[name];
   if (!component) {
+    console.error(`component '${name}' not exist`);
     throw `component '${name}' not exist`;
   }
 

@@ -8,6 +8,7 @@ import { ActionSchema } from "../schema";
 export function ActionLayout({ schema: schemaName }: { schema: string }) {
   const schema = useSchema(schemaName);
   if (schema.type !== "action") {
+    console.error("schema used in ActionLayout must be action schema");
     throw "schema used in ActionLayout must be action schema";
   }
 

@@ -6,7 +6,11 @@ export function EntityEdit(props: {
   return (
     <div className="w-[500px] flex flex-col">
       {props.sections.map((section) => [
-        <EntityEditSection name={section.name} schema={section.schema} />,
+        <EntityEditSection
+          name={section.name}
+          schema={section.schema}
+          key={section.name}
+        />,
       ])}
     </div>
   );
@@ -15,7 +19,7 @@ export function EntityEdit(props: {
 function EntityEditSection({ name, schema }: { name: string; schema: string }) {
   return (
     <div className="flex flex-col">
-      <div className="h-10 bg-black">{name}</div>
+      <div className="bg-gray-800">{name}</div>
       <div className="w-full">
         <ActionLayout schema={schema} />
       </div>
