@@ -67,7 +67,7 @@ export const event_editSaleRestrictions: ActionSchema = {
       component: "EntityMultiPicker_FormField",
       size: "1/2",
       attributes: {
-        label: "Member Typesx",
+        label: "Member Types",
         useNullAsAll: true,
         hideWhen: [
           {
@@ -80,7 +80,7 @@ export const event_editSaleRestrictions: ActionSchema = {
     promocodes: {
       component: "EntityPicker_FormField",
       attributes: {
-        label: "End Date",
+        label: "Promo Code",
         searchable: true,
       },
     },
