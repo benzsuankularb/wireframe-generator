@@ -9,7 +9,7 @@ export function Text_FormField({
   multiline: string;
 }) {
   return (
-    <div className="relative text-black font-[ComicBook]">
+    <div className="relative text-black">
       <div className="absolute top-2 left-2">{label}</div>
       {multiline ? <img src={ImageMultiline} /> : <img src={Image} />}
     </div>

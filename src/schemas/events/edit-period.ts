@@ -2,18 +2,42 @@ import { ActionSchema } from "../../framework/schema";
 
 export const event_editPeriod: ActionSchema = {
   type: "action",
-  fields: {},
-  layout: {
+  fields: {
     startDate: {
-      component: "Text_FormField",
-      attributes: {
-        label: "Start Date",
+      required: true,
+      typeDef: {
+        type: "dateTime",
+        dateOnly: true,
       },
     },
     endDate: {
-      component: "Text_FormField",
+      required: true,
+      typeDef: {
+        type: "dateTime",
+        dateOnly: true,
+      },
+    },
+  },
+  layout: {
+    startDate: {
+      component: "DatePicker_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Start Date",
+        dateOnly: true,
+      },
+    },
+    shortName: {
+      component: "DatePicker_FormField",
+      size: "1/2",
       attributes: {
         label: "End Date",
+        dateOnly: true,
+        conditions: [
+          {
+            gte: "startDate",
+          },
+        ],
       },
     },
   },

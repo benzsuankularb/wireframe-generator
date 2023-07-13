@@ -30,23 +30,28 @@ export const event_editWebsite: ActionSchema = {
     },
   },
   layout: {
-    posters: {
-      component: "ImageMultiUpload_FormField",
-      attributes: {
-        label: "Posters",
-      },
-    },
-    agenda: {
-      component: "ImageUpload_FormField",
-      size: "1/2",
-      attributes: {
-        label: "Agenda Image",
-      },
-    },
-    agendaLink: {
+    link: {
       component: "Text_FormField",
       attributes: {
-        label: "Agenda URL",
+        label: "Web URL",
+      },
+    },
+    headerName: {
+      component: "Text_FormField",
+      attributes: {
+        label: "Header Name",
+      },
+    },
+    alternateHeaderName: {
+      component: "Text_FormField",
+      attributes: {
+        label: "Header Name (Alt)",
+      },
+    },
+    graphicLink: {
+      component: "Text_FormField",
+      attributes: {
+        label: "Graphic URL",
       },
     },
   },

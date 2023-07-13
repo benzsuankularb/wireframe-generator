@@ -39,6 +39,10 @@ export const event_editMedia: ActionSchema = {
       component: "ImageMultiUpload_FormField",
       attributes: {
         label: "Posters",
+        resolution: {
+          width: 1280,
+          height: 720,
+        },
       },
     },
     agenda: {
@@ -46,6 +50,10 @@ export const event_editMedia: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Agenda Image",
+        resolution: {
+          width: 1280,
+          height: 720,
+        },
       },
     },
     agendaLink: {
