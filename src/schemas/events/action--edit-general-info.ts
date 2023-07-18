@@ -15,7 +15,9 @@ export const eventAction_editGeneralInfo: ActionSchema = {
     },
     shortName: {
       required: true,
-      type: "string",
+      typeDef: {
+        type: "string",
+      },
     },
     description: {
       required: true,
@@ -61,12 +63,16 @@ export const eventAction_editGeneralInfo: ActionSchema = {
     eventType: {
       component: "EntityPicker_FormField",
       size: "1/2",
+      docs: ["testestset", "asdefafsfafededsf"],
+      samples: ["val1", "val2"],
       attributes: {
         label: "Type",
       },
     },
     description: {
       component: "Text_FormField",
+      docs: ["testestset", "asdefafsfafededsf"],
+      samples: ["val1", "val2"],
       attributes: {
         label: "Description",
         multiline: true,

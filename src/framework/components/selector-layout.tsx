@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import { createElement } from "react";
-import { useComponent, useSchema } from "../hook";
+import { useComponent, useSchema } from "../contexts/wireframe-generator/hook";
 
 export function SelectorLayout({ schema: schemaName }: { schema: string }) {
   const schema = useSchema(schemaName);
@@ -14,5 +14,5 @@ export function SelectorLayout({ schema: schemaName }: { schema: string }) {
 
   const { component: compName, attributes } = schema.layout;
   const comp = useComponent(compName);
-  return createElement(comp, attributes);
+  return createElement(comp, { ...attributes });
 }

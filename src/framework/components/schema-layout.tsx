@@ -1,4 +1,4 @@
-import { useSchema } from "../hook";
+import { useSchema } from "../contexts/wireframe-generator/hook";
 import { ActionLayout } from "./action-layout";
 import { SelectorLayout } from "./selector-layout";
 

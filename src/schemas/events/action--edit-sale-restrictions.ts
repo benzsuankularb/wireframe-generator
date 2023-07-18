@@ -12,14 +12,16 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
     memberTypes: {
       required: true,
       typeDef: {
-        nullable: true,
-        type: "array",
-        itemTypeDef: {
-          type: "entity",
-          class: "MemberType",
-          fields: {
-            name: {
-              type: "string",
+        type: "nullable",
+        typeDef: {
+          type: "array",
+          itemTypeDef: {
+            type: "entity",
+            class: "MemberType",
+            fields: {
+              name: {
+                type: "string",
+              },
             },
           },
         },
@@ -28,12 +30,14 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
     promocodes: {
       required: true,
       typeDef: {
-        nullable: true,
-        type: "entity",
-        class: "Promocode",
-        fields: {
-          name: {
-            type: "string",
+        type: "nullable",
+        typeDef: {
+          type: "entity",
+          class: "Promocode",
+          fields: {
+            name: {
+              type: "string",
+            },
           },
         },
       },
@@ -43,12 +47,14 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       typeDef: {
         type: "array",
         itemTypeDef: {
-          nullable: true,
-          type: "entity",
-          class: "MemberType",
-          fields: {
-            name: {
-              type: "string",
+          type: "nullable",
+          typeDef: {
+            type: "entity",
+            class: "MemberType",
+            fields: {
+              name: {
+                type: "string",
+              },
             },
           },
         },

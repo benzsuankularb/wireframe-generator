@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import { createElement } from "react";
-import { useComponent, useSchema } from "../hook";
+import { ActionLayoutItemContext } from "../contexts";
+import { useComponent, useSchema } from "../contexts/wireframe-generator/hook";
 import { ActionSchema } from "../schemas";
 
 export function ActionLayout({ schema: schemaName }: { schema: string }) {
@@ -14,21 +15,26 @@ export function ActionLayout({ schema: schemaName }: { schema: string }) {
 
   const layoutNames = Object.keys(schema.layout);
   const layoutItems = layoutNames.map((name) => (
-    <ActionLayoutItem name={name} schema={schema} key={name} />
+    <ActionLayoutItem itemId={name} schema={schemaName} key={name} />
   ));
 
   return <div className="w-full">{layoutItems}</div>;
 }
 
 function ActionLayoutItem({
-  name,
-  schema,
+  schema: schemaName,
+  itemId,
 }: {
-  name: string;
-  schema: ActionSchema;
+  itemId: string;
+  schema: string;
 }) {
-  const layoutItem = schema.layout[name];
+  const schema = useSchema(schemaName) as ActionSchema;
+  const layoutItem = schema.layout[itemId];
   const { component: compName, attributes } = layoutItem;
   const comp = useComponent(compName);
-  return createElement(comp, attributes);
+  return (
+    <ActionLayoutItemContext action={schemaName} itemId={itemId}>
+      {createElement(comp, { ...attributes })}
+    </ActionLayoutItemContext>
+  );
 }

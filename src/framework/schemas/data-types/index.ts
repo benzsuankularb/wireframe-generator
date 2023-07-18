@@ -45,6 +45,7 @@ export type TypeDefinition_Boolean = {
 export type TypeDefinition_Entity = {
   type: "entity";
   class?: string;
+  displayFormat?: string;
   fields: ObjectDefinition;
 };
 
@@ -67,5 +68,5 @@ export type TypeDefinition_DateTime = {
   type: "dateTime";
   before?: number | "now";
   after?: number | "now";
-  omitTime?: boolean;
+  dateOnly?: boolean;
 };

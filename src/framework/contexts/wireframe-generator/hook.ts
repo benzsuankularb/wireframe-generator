@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { useContext } from "react";
-import { WireframeGeneratorContext } from "./contexts";
+import { WireframeGeneratorContext } from "./context";
 
 export const useComponent = (name: string) => {
   const ctx = useContext(WireframeGeneratorContext);
