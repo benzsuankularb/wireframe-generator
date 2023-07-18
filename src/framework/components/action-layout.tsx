@@ -3,7 +3,7 @@
 
 import { createElement } from "react";
 import { useComponent, useSchema } from "../hook";
-import { ActionSchema } from "../schema";
+import { ActionSchema } from "../schemas";
 
 export function ActionLayout({ schema: schemaName }: { schema: string }) {
   const schema = useSchema(schemaName);

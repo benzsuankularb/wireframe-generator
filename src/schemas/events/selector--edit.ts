@@ -1,4 +1,4 @@
-import { SelectorSchema } from "../../framework/schema";
+import { SelectorSchema } from "../../framework/schemas";
 
 export const eventSelector_edit: SelectorSchema = {
   type: "selector",

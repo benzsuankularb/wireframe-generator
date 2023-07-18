@@ -1,4 +1,4 @@
-import { ActionSchema } from "../../framework/schema";
+import { ActionSchema } from "../../framework/schemas";
 
 export const eventAction_editSaleRestrictions: ActionSchema = {
   type: "action",

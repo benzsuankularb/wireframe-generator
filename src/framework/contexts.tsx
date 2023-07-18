@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode, createContext } from "react";
-import { Schema } from "./schema";
+import { Schema } from "./schemas";
 
 export type ComponentFactory = any;
 
