@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schema";
 
-export const event_editGeneralInfo: ActionSchema = {
+export const eventAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
     name: {

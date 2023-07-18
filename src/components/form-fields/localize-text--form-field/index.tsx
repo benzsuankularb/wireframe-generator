@@ -7,7 +7,7 @@ export function LocalizeText_FormField({ label }: { label: string }) {
         {label}
         {" 🌎"}
       </div>
-      <img src={Image} />
+      <img src={Image} className="w-full" />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schema";
 
-export const event_editPeriod: ActionSchema = {
+export const eventAction_editPeriod: ActionSchema = {
   type: "action",
   fields: {
     startDate: {

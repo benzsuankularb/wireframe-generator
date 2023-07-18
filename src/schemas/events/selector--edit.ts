@@ -1,6 +1,6 @@
 import { SelectorSchema } from "../../framework/schema";
 
-export const content_eventEdit: SelectorSchema = {
+export const eventSelector_edit: SelectorSchema = {
   type: "selector",
   layout: {
     component: "EntityEdit",
@@ -8,27 +8,27 @@ export const content_eventEdit: SelectorSchema = {
       sections: [
         {
           name: "General Info",
-          schema: "event_editGeneralInfo",
+          schema: "eventAction_editGeneralInfo",
         },
         {
           name: "Period",
-          schema: "event_editPeriod",
+          schema: "eventAction_editPeriod",
         },
         {
           name: "Sale Restrictions",
-          schema: "event_editSaleRestrictions",
+          schema: "eventAction_editSaleRestrictions",
         },
         {
           name: "Website",
-          schema: "event_editWebsite",
+          schema: "eventAction_editWebsite",
         },
         {
           name: "Media",
-          schema: "event_editMedia",
+          schema: "eventAction_editMedia",
         },
         {
           name: "Contents",
-          schema: "event_editContents",
+          schema: "eventAction_editContents",
         },
       ],
     },

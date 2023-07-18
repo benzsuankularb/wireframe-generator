@@ -1,49 +1,24 @@
 import "./App.css";
-import { DatePicker_FormField } from "./components/form-fields/date-picker--form-field";
-import { EntityMultiPicker_FormField } from "./components/form-fields/entity-multi-picker--form-field";
-import { EntityPicker_FormField } from "./components/form-fields/entity-picker--form-field";
-import { ImageMultiUpload_FormField } from "./components/form-fields/image-multi-upload--form-field";
-import { ImageUpload_FormField } from "./components/form-fields/image-upload--form-field";
-import { LocalizeText_FormField } from "./components/form-fields/localize-text--form-field";
-import { Text_FormField } from "./components/form-fields/text--form-field";
-import { Toggle_FormField } from "./components/form-fields/toggle--form-field";
-import { EntityEdit } from "./components/selectors/entity-edit";
+import { formFieldComponents } from "./components/form-fields";
 import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
-import { event_editContents } from "./schemas/events/edit-contents";
-import { event_editGeneralInfo } from "./schemas/events/edit-general-info";
-import { event_editMedia } from "./schemas/events/edit-media";
-import { event_editPeriod } from "./schemas/events/edit-period";
-import { event_editSaleRestrictions } from "./schemas/events/edit-sale-restrictions";
-import { event_editWebsite } from "./schemas/events/edit-website";
-import { content_eventEdit } from "./schemas/events/event-edit";
+import { eventSchemas } from "./schemas/events";
 
 function App() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const schema = urlParams.get("schema") ?? "eventSelector_edit";
+
   return (
     <WireframeGeneratorConfig
       components={{
-        EntityEdit,
-        DatePicker_FormField,
-        EntityMultiPicker_FormField,
-        EntityPicker_FormField,
-        ImageMultiUpload_FormField,
-        ImageUpload_FormField,
-        LocalizeText_FormField,
-        Text_FormField,
-        Toggle_FormField,
+        ...formFieldComponents,
       }}
       schemas={{
-        content_eventEdit,
-        event_editGeneralInfo,
-        event_editPeriod,
-        event_editSaleRestrictions,
-        event_editWebsite,
-        event_editMedia,
-        event_editContents,
+        ...eventSchemas,
       }}
     >
       <div className="h-screen">
-        <SchemaLayout schema={"content_eventEdit"} />
+        <SchemaLayout schema={schema} />
       </div>
     </WireframeGeneratorConfig>
   );

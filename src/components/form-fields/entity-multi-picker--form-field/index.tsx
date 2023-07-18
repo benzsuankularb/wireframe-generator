@@ -4,7 +4,7 @@ export function EntityMultiPicker_FormField({ label }: { label: string }) {
   return (
     <div className="relative text-black">
       <div className="absolute top-2 left-2">{label}</div>
-      <img src={Image} />
+      <img src={Image} className="w-full" />
     </div>
   );
 }

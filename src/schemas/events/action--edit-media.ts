@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schema";
 
-export const event_editMedia: ActionSchema = {
+export const eventAction_editMedia: ActionSchema = {
   type: "action",
   fields: {
     posters: {

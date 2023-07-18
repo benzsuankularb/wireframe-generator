@@ -13,7 +13,7 @@ export function ImageUpload_FormField({
       {resolution ? (
         <div className="absolute bottom-[5px] left-[120px]">{`${resolution.width}x${resolution.height}`}</div>
       ) : null}
-      <img src={Image} />
+      <img src={Image} className="w-full" />
     </div>
   );
 }
