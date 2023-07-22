@@ -1,4 +1,3 @@
-import { eventAction_editContents } from "./action--edit-contents";
 import { eventAction_editGeneralInfo } from "./action--edit-general-info";
 import { eventAction_editMedia } from "./action--edit-media";
 import { eventAction_editPeriod } from "./action--edit-period";
@@ -13,5 +12,4 @@ export const eventSchemas = {
   eventAction_editSaleRestrictions,
   eventAction_editWebsite,
   eventAction_editMedia,
-  eventAction_editContents,
 };

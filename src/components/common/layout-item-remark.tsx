@@ -13,8 +13,8 @@ export function LayoutItemRemark() {
   return (
     <div className="absolute -right-2 top-4 translate-x-full font-sans text-red-800 text-xs text-left">
       <ul>
-        {remarks.map((remark) => (
-          <li>• {remark}</li>
+        {remarks.map((remark, i) => (
+          <li key={i}>• {remark}</li>
         ))}
       </ul>
     </div>

@@ -2,33 +2,46 @@ import { SelectorSchema } from "../../framework/schemas";
 
 export const eventSelector_edit: SelectorSchema = {
   type: "selector",
+  schemas: {
+    editGeneralInfo: {
+      schema: "eventAction_editGeneralInfo",
+    },
+    editPeriod: {
+      schema: "eventAction_editPeriod",
+    },
+    editSaleRestrictions: {
+      schema: "eventAction_editSaleRestrictions",
+    },
+    editWebsite: {
+      schema: "eventAction_editWebsite",
+    },
+    editMedia: {
+      schema: "eventAction_editMedia",
+    },
+  },
   layout: {
     component: "EntityEdit",
     attributes: {
       sections: [
         {
           name: "General Info",
-          schema: "eventAction_editGeneralInfo",
+          schemaRef: "editGeneralInfo",
         },
         {
           name: "Period",
-          schema: "eventAction_editPeriod",
+          schemaRef: "editPeriod",
         },
         {
           name: "Sale Restrictions",
-          schema: "eventAction_editSaleRestrictions",
+          schemaRef: "editSaleRestrictions",
         },
         {
           name: "Website",
-          schema: "eventAction_editWebsite",
+          schemaRef: "editWebsite",
         },
         {
           name: "Media",
-          schema: "eventAction_editMedia",
-        },
-        {
-          name: "Contents",
-          schema: "eventAction_editContents",
+          schemaRef: "editMedia",
         },
       ],
     },
