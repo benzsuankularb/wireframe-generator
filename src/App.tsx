@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
 import { formFieldComponents } from "./components/form-fields";
 import { pageSpecificComponents } from "./components/page-specifics";
@@ -12,21 +13,23 @@ function App() {
   const schema = urlParams.get("schema") ?? "eventSelector_edit";
 
   return (
-    <WireframeGeneratorConfig
-      components={{
-        ...formFieldComponents,
-        ...selectorComponents,
-        ...pageSpecificComponents,
-      }}
-      schemas={{
-        ...eventSchemas,
-        ...contentSchemas,
-      }}
-    >
-      <div className="h-screen">
-        <SchemaLayout schema={schema} />
-      </div>
-    </WireframeGeneratorConfig>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <WireframeGeneratorConfig
+        components={{
+          ...formFieldComponents,
+          ...selectorComponents,
+          ...pageSpecificComponents,
+        }}
+        schemas={{
+          ...eventSchemas,
+          ...contentSchemas,
+        }}
+      >
+        <div className="h-screen">
+          <SchemaLayout schema={schema} />
+        </div>
+      </WireframeGeneratorConfig>
+    </ErrorBoundary>
   );
 }
 

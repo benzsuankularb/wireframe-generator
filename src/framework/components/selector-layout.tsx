@@ -9,7 +9,6 @@ import { useComponent, useSchema } from "../contexts/wireframe-generator/hook";
 export function SelectorLayout({ schema: schemaName }: { schema: string }) {
   const schema = useSchema(schemaName);
   if (schema.type !== "selector") {
-    console.error("schema used in SelectorLayout must be selector schema");
     throw "schema used in SelectorLayout must be selector schema";
   }
 
