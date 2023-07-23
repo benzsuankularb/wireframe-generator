@@ -8,9 +8,8 @@ export function LayoutItemRemark({
   const { layoutItemSchema } = useLayoutItem();
 
   const remarks = [...(layoutItemSchema.docs ?? [])];
-
-  if (layoutItemSchema.samples) {
-    const samples = overrideSamples ?? layoutItemSchema.samples;
+  const samples = overrideSamples ?? layoutItemSchema.samples;
+  if (samples) {
     const samplesString = "i.e. " + samples.join(", ");
     remarks.push(samplesString);
   }

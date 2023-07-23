@@ -33,13 +33,12 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         },
       },
     },
-    promocodes: {
-      required: true,
+    promotions: {
       typeDef: {
         type: "nullable",
         typeDef: {
           type: "entity",
-          class: "Promocode",
+          class: "Promotion",
           fields: {
             name: {
               type: "string",
@@ -48,15 +47,34 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         },
       },
     },
-    paymentChannels: {
+    deals: {
+      typeDef: {
+        type: "nullable",
+        typeDef: {
+          type: "entity",
+          class: "Deal",
+          fields: {
+            name: {
+              type: "string",
+            },
+          },
+        },
+      },
+    },
+    allowComplementary: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
+    saleChannels: {
       required: true,
       typeDef: {
-        type: "array",
-        itemTypeDef: {
-          type: "nullable",
-          typeDef: {
+        type: "nullable",
+        typeDef: {
+          type: "array",
+          itemTypeDef: {
             type: "entity",
-            class: "PaymentChannel",
+            class: "SaleChannel",
             displayFormat: "%name",
             fields: {
               name: {
@@ -112,23 +130,40 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         "Empty means all member types are restricted (Same as no one)",
       ],
     },
-    promocodes: {
+    promotions: {
       component: "EntityPicker_FormField",
       attributes: {
-        label: "Promo Code",
+        label: "Promotions",
         searchable: true,
       },
-      docs: ["Empty means no promocode restricted"],
-      target: "promocodes",
+      docs: ["Empty means no promotions restricted"],
+      target: "promotions",
     },
-    paymentChannels: {
+    deals: {
+      component: "EntityPicker_FormField",
+      attributes: {
+        label: "Deals",
+        searchable: true,
+      },
+      docs: ["Empty means no deals restricted"],
+      target: "deals",
+    },
+    allowComplementary: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Allow Complementary",
+        searchable: true,
+      },
+      target: "allowComplementary",
+    },
+    saleChannels: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        label: "Payment Channels",
+        label: "Sale Channels",
       },
-      target: "paymentChannels",
-      docs: ["Empty means no payment channel restricted"],
-      samples: ["Disney (Partner)", "LinePay (Online)", "Kiosk (Front)"],
+      target: "saleChannels",
+      docs: ["Empty means no sale channel restricted"],
+      samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
     },
     startTime: {
       component: "DatePicker_FormField",

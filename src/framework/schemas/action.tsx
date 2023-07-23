@@ -15,7 +15,7 @@ export type ActionSchema_Field = {
   allowBulk?: boolean;
   readOnly?: string[];
   external?: boolean;
-  suggestion?: string[];
+  suggestion?: "fixed" | "dynamic" | "none";
   dependsOn?: string[];
   docs?: string[];
   samples?: string[];
