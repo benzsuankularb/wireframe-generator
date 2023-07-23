@@ -4,6 +4,7 @@ import { TypeDefinition } from "./data-types";
 
 export type ActionSchema = {
   type: "action";
+  global?: boolean;
   fields: { [name: string]: ActionSchema_Field };
   layout: { [name: string]: ActionSchema_LayoutItem };
 };

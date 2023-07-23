@@ -7,11 +7,13 @@ import { ImageUpload_FormField } from "./image-upload--form-field";
 import { Text_FormField } from "./text--form-field";
 import { TextItems_FormField } from "./text-items--form-field";
 import { Toggle_FormField } from "./toggle--form-field";
+import { ValuePicker_FormField } from "./value-picker--form-field";
 
 export const formFieldComponents = {
   DatePicker_FormField,
   EntityMultiPicker_FormField,
   TextItems_FormField,
+  ValuePicker_FormField,
   EntityOrderer_FormField,
   EntityPicker_FormField,
   ImageMultiUpload_FormField,

@@ -7,6 +7,7 @@ import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
 import { contentSchemas } from "./schemas/content";
 import { eventSchemas } from "./schemas/event";
+import { timingSchemas } from "./schemas/timing";
 
 function App() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -23,6 +24,7 @@ function App() {
         schemas={{
           ...eventSchemas,
           ...contentSchemas,
+          ...timingSchemas,
         }}
       >
         <div className="h-screen">
