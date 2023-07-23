@@ -1,8 +1,11 @@
 import "./App.css";
 import { formFieldComponents } from "./components/form-fields";
+import { pageSpecificComponents } from "./components/page-specifics";
+import { selectorComponents } from "./components/selectors";
 import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
-import { eventSchemas } from "./schemas/events";
+import { contentSchemas } from "./schemas/content";
+import { eventSchemas } from "./schemas/event";
 
 function App() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -12,9 +15,12 @@ function App() {
     <WireframeGeneratorConfig
       components={{
         ...formFieldComponents,
+        ...selectorComponents,
+        ...pageSpecificComponents,
       }}
       schemas={{
         ...eventSchemas,
+        ...contentSchemas,
       }}
     >
       <div className="h-screen">

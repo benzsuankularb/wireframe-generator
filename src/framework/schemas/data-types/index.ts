@@ -34,8 +34,8 @@ export type TypeDefinition_Nullable = {
 
 export type TypeDefinition_Number = {
   type: "number";
-  min?: string;
-  max?: string;
+  min?: number;
+  max?: number;
 };
 
 export type TypeDefinition_Boolean = {
@@ -52,6 +52,8 @@ export type TypeDefinition_Entity = {
 export type TypeDefinition_Array = {
   type: "array";
   itemTypeDef: TypeDefinition;
+  min?: number;
+  max?: number;
 };
 
 export type TypeDefinition_Object = {

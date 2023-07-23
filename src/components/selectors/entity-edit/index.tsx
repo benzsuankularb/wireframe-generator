@@ -1,5 +1,5 @@
-import { ActionLayout } from "../../framework/components/action-layout";
-import { useSelectorSchemaRef } from "../../framework/contexts/selector-layout";
+import { ActionLayout } from "../../../framework/components/action-layout";
+import { useSelectorSchemaRef } from "../../../framework/contexts/selector-layout";
 import Image from "./image.png";
 
 export function EntityEdit(props: {

@@ -1,10 +1,29 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const eventAction_editSaleRestrictions: ActionSchema = {
+export const contentAction_editSaleRestrictions: ActionSchema = {
   type: "action",
   fields: {
+    event: {
+      typeDef: {
+        type: "nullable",
+        typeDef: {
+          type: "entity",
+          class: "Event",
+          displayFormat: "%name",
+          fields: {
+            name: {
+              type: "string",
+            },
+          },
+        },
+      },
+    },
+    useEvent: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
     audience: {
-      required: true,
       typeDef: {
         type: "entity",
         displayFormat: "%name",
@@ -16,7 +35,6 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     memberTypes: {
-      required: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -34,7 +52,6 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     promocodes: {
-      required: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -49,7 +66,6 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     paymentChannels: {
-      required: true,
       typeDef: {
         type: "array",
         itemTypeDef: {
@@ -84,6 +100,17 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
     },
   },
   layout: {
+    useEvent: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Use Event's Sale Restrictions",
+      },
+      docs: [
+        "Take sale restriction from the event when turned on",
+        "All options below will be invisible when turned on",
+        "This will be forced to off if there is no event selected.",
+      ],
+    },
     audience: {
       component: "EntityPicker_FormField",
       size: "1/2",
@@ -107,7 +134,10 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         ],
       },
       target: "memberTypes",
-      docs: ["Only show when audience is `Member Only`"],
+      docs: [
+        "Only visible when audience is `Member Only`",
+        "Empty means all member types are restricted (Same as no one)",
+      ],
     },
     promocodes: {
       component: "EntityPicker_FormField",
@@ -115,6 +145,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         label: "Promo Code",
         searchable: true,
       },
+      docs: ["Empty means no promocode restricted"],
       target: "promocodes",
     },
     paymentChannels: {
@@ -123,7 +154,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         label: "Payment Channels",
       },
       target: "paymentChannels",
-      docs: ["Empty is allowed"],
+      docs: ["Empty means no payment channel restricted"],
       samples: ["Disney (Partner)", "LinePay (Online)", "Kiosk (Front)"],
     },
     startTime: {
@@ -132,7 +163,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         label: "Sale Start",
       },
       target: "startTime",
-      docs: ["Empty is allowed"],
+      docs: ["Empty means no starting sale time restricted"],
     },
     endTime: {
       component: "DatePicker_FormField",
@@ -140,7 +171,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         label: "Sale End",
       },
       target: "endTime",
-      docs: ["Empty is allowed"],
+      docs: ["Empty means no ending sale time restricted"],
     },
     allowSeatSelection: {
       component: "Toggle_FormField",
