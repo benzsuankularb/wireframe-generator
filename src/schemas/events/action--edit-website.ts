@@ -13,12 +13,11 @@ export const eventAction_editWebsite: ActionSchema = {
     headerName: {
       required: true,
       typeDef: {
-        type: "string",
-      },
-    },
-    alternateHeaderName: {
-      typeDef: {
-        type: "string",
+        type: "localized",
+        locales: ["en", "th"],
+        itemTypeDef: {
+          type: "string",
+        },
       },
     },
     graphicLink: {
@@ -35,24 +34,21 @@ export const eventAction_editWebsite: ActionSchema = {
       attributes: {
         label: "Web URL",
       },
+      target: "link",
     },
     headerName: {
       component: "Text_FormField",
       attributes: {
         label: "Header Name",
       },
-    },
-    alternateHeaderName: {
-      component: "Text_FormField",
-      attributes: {
-        label: "Header Name (Alt)",
-      },
+      target: "headerName",
     },
     graphicLink: {
       component: "Text_FormField",
       attributes: {
         label: "Graphic URL",
       },
+      target: "graphicLink",
     },
   },
 };

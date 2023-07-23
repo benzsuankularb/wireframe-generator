@@ -46,12 +46,12 @@ export const eventAction_editGeneralInfo: ActionSchema = {
   },
   layout: {
     name: {
-      component: "LocalizeText_FormField",
+      component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Name",
-        locales: ["en", "th"],
       },
+      target: "name",
     },
     shortName: {
       component: "Text_FormField",
@@ -59,24 +59,23 @@ export const eventAction_editGeneralInfo: ActionSchema = {
       attributes: {
         label: "Short Name",
       },
+      target: "shortName",
     },
     eventType: {
       component: "EntityPicker_FormField",
       size: "1/2",
-      docs: ["testestset", "asdefafsfafededsf"],
-      samples: ["val1", "val2"],
       attributes: {
         label: "Type",
       },
+      target: "eventType",
     },
     description: {
       component: "Text_FormField",
-      docs: ["testestset", "asdefafsfafededsf"],
-      samples: ["val1", "val2"],
       attributes: {
         label: "Description",
         multiline: true,
       },
+      target: "description",
     },
   },
 };

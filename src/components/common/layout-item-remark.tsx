@@ -1,12 +1,12 @@
 import { useLayoutItem } from "../../framework/contexts";
 
 export function LayoutItemRemark() {
-  const { layoutSchema } = useLayoutItem();
+  const { layoutItemSchema } = useLayoutItem();
 
-  const remarks = [...(layoutSchema.docs ?? [])];
+  const remarks = [...(layoutItemSchema.docs ?? [])];
 
-  if (layoutSchema.samples) {
-    const samples = "i.e. " + layoutSchema.samples.join(", ");
+  if (layoutItemSchema.samples) {
+    const samples = "i.e. " + layoutItemSchema.samples.join(", ");
     remarks.push(samples);
   }
 

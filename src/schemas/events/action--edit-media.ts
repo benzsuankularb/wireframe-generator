@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const eventAction_editMedia: ActionSchema = {
+export const eventAction_editMedias: ActionSchema = {
   type: "action",
   fields: {
     posters: {
@@ -61,6 +61,7 @@ export const eventAction_editMedia: ActionSchema = {
       attributes: {
         label: "Agenda URL",
       },
+      target: "agendaLink",
     },
   },
 };

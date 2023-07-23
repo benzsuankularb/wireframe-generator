@@ -15,8 +15,14 @@ export const eventSelector_edit: SelectorSchema = {
     editWebsite: {
       schema: "eventAction_editWebsite",
     },
-    editMedia: {
-      schema: "eventAction_editMedia",
+    editMedias: {
+      schema: "eventAction_editMedias",
+    },
+    editContents: {
+      schema: "eventAction_editContents",
+    },
+    editFeatured: {
+      schema: "eventAction_editFeatured",
     },
   },
   layout: {
@@ -36,12 +42,20 @@ export const eventSelector_edit: SelectorSchema = {
           schemaRef: "editSaleRestrictions",
         },
         {
-          name: "Website",
+          name: "🟥 Website",
           schemaRef: "editWebsite",
         },
         {
-          name: "Media",
-          schemaRef: "editMedia",
+          name: "🟥 Medias",
+          schemaRef: "editMedias",
+        },
+        {
+          name: "🟥 Featured",
+          schemaRef: "editFeatured",
+        },
+        {
+          name: "Contents",
+          schemaRef: "editContents",
         },
       ],
     },

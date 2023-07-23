@@ -7,18 +7,18 @@ import { InternalActionLayoutItemContext } from "./context";
 
 export const useLayoutItem = () => {
   const ctx = useContext(InternalActionLayoutItemContext);
-  const { action, itemId: layoutId } = ctx;
+  const { action, itemId: itemId } = ctx;
   const actionSchema = useSchema(action) as ActionSchema;
-  const layoutSchema = actionSchema.layout[layoutId];
-  return { actionSchema, layoutSchema };
+  const layoutItemSchema = actionSchema.layout[itemId];
+  return { actionSchema, layoutItemSchema };
 };
 
 export const useLayoutItemTarget = (id?: string) => {
-  const { layoutSchema, actionSchema } = useLayoutItem();
+  const { layoutItemSchema, actionSchema } = useLayoutItem();
   const target =
     id !== undefined
-      ? (layoutSchema.target as { [key: string]: string })[id]
-      : layoutSchema.target;
+      ? (layoutItemSchema.target as { [key: string]: string })[id]
+      : layoutItemSchema.target;
   if (typeof target !== "string") {
     throw `invalid target ${id ?? ""}`;
   }
@@ -27,11 +27,11 @@ export const useLayoutItemTarget = (id?: string) => {
 };
 
 export const useLayoutItemSource = (id?: string) => {
-  const { layoutSchema, actionSchema } = useLayoutItem();
+  const { layoutItemSchema, actionSchema } = useLayoutItem();
   const source =
     id !== undefined
-      ? (layoutSchema.source as { [key: string]: string })[id]
-      : layoutSchema.source;
+      ? (layoutItemSchema.source as { [key: string]: string })[id]
+      : layoutItemSchema.source;
   if (typeof source !== "string") {
     throw `invalid source ${id ?? ""}`;
   }
