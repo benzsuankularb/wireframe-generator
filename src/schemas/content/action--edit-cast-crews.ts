@@ -14,13 +14,8 @@ export const contentAction_editCastCrews: ActionSchema = {
               type: "string",
             },
             role: {
-              type: "entity",
-              class: "CastCrewRole",
-              fields: {
-                name: {
-                  type: "string",
-                },
-              },
+              type: "string",
+              enum: ["actor", "director"],
             },
             picture: {
               type: "image",

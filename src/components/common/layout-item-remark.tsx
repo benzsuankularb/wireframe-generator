@@ -1,13 +1,18 @@
 import { useLayoutItem } from "../../framework/contexts";
 
-export function LayoutItemRemark() {
+export function LayoutItemRemark({
+  overrideSamples,
+}: {
+  overrideSamples?: string[];
+}) {
   const { layoutItemSchema } = useLayoutItem();
 
   const remarks = [...(layoutItemSchema.docs ?? [])];
 
   if (layoutItemSchema.samples) {
-    const samples = "i.e. " + layoutItemSchema.samples.join(", ");
-    remarks.push(samples);
+    const samples = overrideSamples ?? layoutItemSchema.samples;
+    const samplesString = "i.e. " + samples.join(", ");
+    remarks.push(samplesString);
   }
 
   return (

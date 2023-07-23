@@ -14,6 +14,7 @@ export type ActionSchema_Field = {
   required?: boolean;
   allowBulk?: boolean;
   readOnly?: string[];
+  external?: boolean;
   suggestion?: string[];
   dependsOn?: string[];
   docs?: string[];

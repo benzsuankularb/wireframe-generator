@@ -22,7 +22,7 @@ export const timingAction_editInitialTime: ActionSchema = {
       component: "ValuePicker_FormField",
       attributes: {
         label: "Initial Day of the Week",
-        options: {
+        values: {
           0: "Mon",
           1: "Tue",
           2: "Wed",
@@ -32,7 +32,6 @@ export const timingAction_editInitialTime: ActionSchema = {
           6: "Sun",
         },
       },
-      samples: ["Mon", "Fri", "Sat"],
       target: "initialDayOfWeek",
     },
     initialHourOfDay: {

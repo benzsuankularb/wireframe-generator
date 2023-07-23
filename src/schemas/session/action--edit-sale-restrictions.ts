@@ -1,35 +1,29 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const contentAction_editSaleRestrictions: ActionSchema = {
+export const sessionAction_editSaleRestrictions: ActionSchema = {
   type: "action",
   fields: {
-    event: {
+    source: {
+      allowBulk: true,
       typeDef: {
-        type: "nullable",
-        typeDef: {
-          type: "entity",
-          class: "Event",
-          displayFormat: "%name",
-          fields: {
-            name: {
-              type: "string",
-            },
+        type: "string",
+        enum: ["none", "event", "content"],
+      },
+    },
+    audience: {
+      allowBulk: true,
+      typeDef: {
+        type: "entity",
+        displayFormat: "%name",
+        fields: {
+          name: {
+            type: "string",
           },
         },
       },
     },
-    source: {
-      typeDef: {
-        type: "boolean",
-      },
-    },
-    audience: {
-      typeDef: {
-        type: "string",
-        enum: ["none", "memberOnly", "everyone"],
-      },
-    },
     memberTypes: {
+      allowBulk: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -47,6 +41,7 @@ export const contentAction_editSaleRestrictions: ActionSchema = {
       },
     },
     promocodes: {
+      allowBulk: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -61,6 +56,7 @@ export const contentAction_editSaleRestrictions: ActionSchema = {
       },
     },
     paymentChannels: {
+      allowBulk: true,
       typeDef: {
         type: "array",
         itemTypeDef: {
@@ -79,16 +75,19 @@ export const contentAction_editSaleRestrictions: ActionSchema = {
       },
     },
     startTime: {
+      allowBulk: true,
       typeDef: {
         type: "dateTime",
       },
     },
     endTime: {
+      allowBulk: true,
       typeDef: {
         type: "dateTime",
       },
     },
     allowSeatSelection: {
+      allowBulk: true,
       typeDef: {
         type: "boolean",
       },
@@ -102,10 +101,12 @@ export const contentAction_editSaleRestrictions: ActionSchema = {
         values: {
           none: "None",
           event: "Event",
+          content: "Content",
         },
       },
+      target: "source",
       docs: [
-        "Select the source of sale restriction will be used in this session",
+        "Select what the source of sale restriction used in this session",
         "All options below will be read-only when source is not none",
         "No event option to select, If session have no event.",
       ],

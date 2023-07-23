@@ -1,7 +1,9 @@
-import { editContentComponents } from "./edit-content";
+import { contentComponents } from "./content";
+import { sessionComponents } from "./session";
 
-export * from "./edit-content";
+export * from "./content";
 
 export const pageSpecificComponents = {
-  ...editContentComponents,
+  ...contentComponents,
+  ...sessionComponents,
 };

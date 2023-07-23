@@ -30,7 +30,7 @@ export const contentAction_editFormat: ActionSchema = {
     formatOptions: {
       typeDef: {
         type: "entity",
-        class: "ContentFormatOptions",
+        class: "ContentFormat",
         displayFormat: "%name",
         fields: {
           name: {
