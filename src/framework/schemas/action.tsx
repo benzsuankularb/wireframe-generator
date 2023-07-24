@@ -13,7 +13,7 @@ export type ActionSchema_Field = {
   typeDef: TypeDefinition;
   required?: boolean;
   allowBulk?: boolean;
-  readOnly?: string[];
+  readOnly?: boolean;
   external?: boolean;
   suggestion?: "fixed" | "dynamic" | "none";
   dependsOn?: string[];

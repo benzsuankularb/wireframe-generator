@@ -3,12 +3,6 @@ import { ActionSchema } from "../../framework/schemas";
 export const sessionAction_editDuration: ActionSchema = {
   type: "action",
   fields: {
-    contentDuration: {
-      external: true,
-      typeDef: {
-        type: "number",
-      },
-    },
     preSessionDuration: {
       typeDef: {
         type: "nullable",
@@ -18,6 +12,7 @@ export const sessionAction_editDuration: ActionSchema = {
       },
     },
     preBreakContentDuration: {
+      readOnly: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -26,6 +21,16 @@ export const sessionAction_editDuration: ActionSchema = {
       },
     },
     breakDuration: {
+      readOnly: true,
+      typeDef: {
+        type: "nullable",
+        typeDef: {
+          type: "number",
+        },
+      },
+    },
+    contentDuration: {
+      readOnly: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -51,22 +56,6 @@ export const sessionAction_editDuration: ActionSchema = {
       },
       target: "preSessionDuration",
     },
-    preBreakContentDuration: {
-      component: "Text_FormField",
-      attributes: {
-        label: "Pre-break Content Duration",
-        suffix: "Mins",
-      },
-      target: "preBreakContentDuration",
-    },
-    breakDuration: {
-      component: "Text_FormField",
-      attributes: {
-        label: "Break Duration",
-        suffix: "Mins",
-      },
-      target: "breakDuration",
-    },
     cleanupDuration: {
       component: "Text_FormField",
       attributes: {
@@ -74,6 +63,33 @@ export const sessionAction_editDuration: ActionSchema = {
         suffix: "Mins",
       },
       target: "cleanupDuration",
+    },
+    contentDuration: {
+      component: "ReadOnly_FormField",
+      attributes: {
+        label: "Break Duration",
+        suffix: "Mins",
+      },
+      samples: ["95 Mins"],
+      target: "contentDuration",
+    },
+    preBreakContentDuration: {
+      component: "ReadOnly_FormField",
+      attributes: {
+        label: "Break Duration",
+        suffix: "Mins",
+      },
+      samples: ["60 Mins"],
+      target: "preBreakContentDuration",
+    },
+    breakDuration: {
+      component: "ReadOnly_FormField",
+      attributes: {
+        label: "Break Duration",
+        suffix: "Mins",
+      },
+      samples: ["10 Mins"],
+      target: "breakDuration",
     },
     totalDuration: {
       component: "SessionTotalDuration_FormField",

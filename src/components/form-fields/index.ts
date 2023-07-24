@@ -4,6 +4,7 @@ import { EntityOrderer_FormField } from "./entity-orderer--form-field";
 import { EntityPicker_FormField } from "./entity-picker--form-field";
 import { ImageMultiUpload_FormField } from "./image-multi-upload--form-field";
 import { ImageUpload_FormField } from "./image-upload--form-field";
+import { ReadOnly_FormField } from "./read-only--form-field";
 import { Text_FormField } from "./text--form-field";
 import { TextItems_FormField } from "./text-items--form-field";
 import { Toggle_FormField } from "./toggle--form-field";
@@ -13,6 +14,7 @@ export const formFieldComponents = {
   DatePicker_FormField,
   EntityMultiPicker_FormField,
   TextItems_FormField,
+  ReadOnly_FormField,
   ValuePicker_FormField,
   EntityOrderer_FormField,
   EntityPicker_FormField,

@@ -15,12 +15,6 @@ export const contentAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    duration: {
-      typeDef: {
-        type: "number",
-        max: 5000,
-      },
-    },
     name: {
       typeDef: {
         type: "localized",
@@ -76,15 +70,6 @@ export const contentAction_editGeneralInfo: ActionSchema = {
         label: "Name",
       },
       target: "name",
-    },
-    duration: {
-      component: "Text_FormField",
-      size: "1/2",
-      attributes: {
-        label: "Duration",
-        suffix: "Mins",
-      },
-      target: "duration",
     },
     shortName: {
       component: "Text_FormField",

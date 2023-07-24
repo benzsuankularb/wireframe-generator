@@ -55,6 +55,7 @@ export const eventAction_editMedias: ActionSchema = {
           height: 720,
         },
       },
+      target: "agenda",
     },
     agendaLink: {
       component: "Text_FormField",

@@ -23,6 +23,9 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
     editDuration: {
       schema: "sessionAction_editDuration",
     },
+    editEvent: {
+      schema: "sessionAction_editEvent",
+    },
     editSaleRestrictions: {
       schema: "sessionAction_editSaleRestrictions",
     },
@@ -46,6 +49,10 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
         {
           name: "Duration",
           schemaRef: "editDuration",
+        },
+        {
+          name: "Event",
+          schemaRef: "editEvent",
         },
         {
           name: "Sale Restrictions",

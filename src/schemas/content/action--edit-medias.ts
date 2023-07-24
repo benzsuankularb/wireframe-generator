@@ -4,7 +4,6 @@ export const contentAction_editMedias: ActionSchema = {
   type: "action",
   fields: {
     posters: {
-      required: true,
       typeDef: {
         type: "localized",
         locales: ["en", "th"],
@@ -21,7 +20,6 @@ export const contentAction_editMedias: ActionSchema = {
       },
     },
     banner: {
-      required: true,
       typeDef: {
         type: "localized",
         locales: ["en", "th"],
@@ -35,7 +33,6 @@ export const contentAction_editMedias: ActionSchema = {
       },
     },
     shareBanner: {
-      required: true,
       typeDef: {
         type: "localized",
         locales: ["en", "th"],
@@ -49,7 +46,6 @@ export const contentAction_editMedias: ActionSchema = {
       },
     },
     videoLinks: {
-      required: true,
       typeDef: {
         type: "localized",
         locales: ["en", "th"],
@@ -97,7 +93,7 @@ export const contentAction_editMedias: ActionSchema = {
           height: 720,
         },
       },
-      target: "share banner",
+      target: "shareBanner",
     },
     videoLinks: {
       component: "TextItems_FormField",

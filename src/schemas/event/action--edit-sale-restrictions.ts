@@ -47,20 +47,6 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         },
       },
     },
-    deals: {
-      typeDef: {
-        type: "nullable",
-        typeDef: {
-          type: "entity",
-          class: "Deal",
-          fields: {
-            name: {
-              type: "string",
-            },
-          },
-        },
-      },
-    },
     allowComplementary: {
       typeDef: {
         type: "boolean",
@@ -139,19 +125,10 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       docs: ["Empty means no promotions restricted"],
       target: "promotions",
     },
-    deals: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Deals",
-        searchable: true,
-      },
-      docs: ["Empty means no deals restricted"],
-      target: "deals",
-    },
     allowComplementary: {
       component: "Toggle_FormField",
       attributes: {
-        label: "Allow Complementary",
+        label: "Allow Complementary Promotions",
         searchable: true,
       },
       target: "allowComplementary",

@@ -20,6 +20,9 @@ export const contentSelector_edit: SelectorSchema = {
     editContentInfo: {
       schema: "contentAction_editContentInfo",
     },
+    editDuration: {
+      schema: "contentAction_editDuration",
+    },
     editFormat: {
       schema: "contentAction_editFormat",
     },
@@ -57,6 +60,10 @@ export const contentSelector_edit: SelectorSchema = {
         {
           name: "Content Info",
           schemaRef: "editContentInfo",
+        },
+        {
+          name: "Duration",
+          schemaRef: "editDuration",
         },
         {
           name: "Formating",
