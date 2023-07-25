@@ -32,8 +32,8 @@ export const contentSelector_edit: SelectorSchema = {
         event: "event",
       },
     },
-    editMedias: {
-      schema: "contentAction_editMedias",
+    editMedia: {
+      schema: "contentAction_editMedia",
     },
     editCastCrews: {
       schema: "contentAction_editCastCrews",
@@ -74,8 +74,8 @@ export const contentSelector_edit: SelectorSchema = {
           schemaRef: "editEvent",
         },
         {
-          name: "Medias",
-          schemaRef: "editMedias",
+          name: "Media",
+          schemaRef: "editMedia",
         },
         {
           name: "Cast & Crews",

@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const contentAction_editMedias: ActionSchema = {
+export const contentAction_editMedia: ActionSchema = {
   type: "action",
   fields: {
     posters: {

@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const eventAction_editMedias: ActionSchema = {
+export const eventAction_editMedia: ActionSchema = {
   type: "action",
   fields: {
     posters: {
@@ -44,6 +44,7 @@ export const eventAction_editMedias: ActionSchema = {
           height: 720,
         },
       },
+      target: "posters",
     },
     agenda: {
       component: "ImageUpload_FormField",

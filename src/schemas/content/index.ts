@@ -5,7 +5,7 @@ import { contentAction_editDuration } from "./action--edit-duration";
 import { contentAction_editEvent } from "./action--edit-event";
 import { contentAction_editFormat } from "./action--edit-format";
 import { contentAction_editGeneralInfo } from "./action--edit-general-info";
-import { contentAction_editMedias } from "./action--edit-medias";
+import { contentAction_editMedia } from "./action--edit-media";
 import { contentAction_editSaleRestrictions } from "./action--edit-sale-restrictions";
 import { contentSelector_edit } from "./selector--edit";
 
@@ -18,6 +18,6 @@ export const contentSchemas = {
   contentAction_editContentInfo,
   contentAction_editGeneralInfo,
   contentAction_editDuration,
-  contentAction_editMedias,
+  contentAction_editMedia,
   contentSelector_edit,
 };
