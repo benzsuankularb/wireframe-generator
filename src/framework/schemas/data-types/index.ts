@@ -46,7 +46,7 @@ export type TypeDefinition_Entity = {
   type: "entity";
   class?: string;
   displayFormat?: string;
-  fields: ObjectDefinition;
+  fields?: ObjectDefinition;
 };
 
 export type TypeDefinition_Array = {

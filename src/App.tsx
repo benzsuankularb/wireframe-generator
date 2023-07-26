@@ -7,6 +7,7 @@ import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
 import { contentSchemas } from "./schemas/content";
 import { eventSchemas } from "./schemas/event";
+import { screenSchemas } from "./schemas/screen";
 import { sessionSchemas } from "./schemas/session";
 import { timingSchemas } from "./schemas/timing";
 
@@ -23,6 +24,7 @@ function App() {
           ...pageSpecificComponents,
         }}
         schemas={{
+          ...screenSchemas,
           ...eventSchemas,
           ...contentSchemas,
           ...timingSchemas,

@@ -1,4 +1,4 @@
-import { ActionLayout } from "../../../framework/components/action-layout";
+import { SchemaLayout } from "../../../framework/components";
 import Image from "./image.png";
 
 export function EntityEdit(props: {
@@ -33,7 +33,7 @@ function EntityEditSection({
         <img src={Image} className="w-full" />
       </div>
       <div className="w-full">
-        <ActionLayout schema={schemaName} />
+        <SchemaLayout schema={schemaName} />
       </div>
     </div>
   );

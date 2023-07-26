@@ -3,104 +3,26 @@ import { ActionSchema } from "../../framework/schemas";
 export const screenAction_editSponsor: ActionSchema = {
   type: "action",
   fields: {
-    posters: {
+    sponsorLogo: {
       typeDef: {
-        type: "localized",
-        locales: ["en", "th"],
-        itemTypeDef: {
-          type: "array",
-          itemTypeDef: {
-            type: "image",
-            resolution: {
-              width: 1280,
-              height: 720,
-            },
-          },
-        },
-      },
-    },
-    banner: {
-      typeDef: {
-        type: "localized",
-        locales: ["en", "th"],
-        itemTypeDef: {
-          type: "image",
-          resolution: {
-            width: 1280,
-            height: 720,
-          },
-        },
-      },
-    },
-    shareBanner: {
-      typeDef: {
-        type: "localized",
-        locales: ["en", "th"],
-        itemTypeDef: {
-          type: "image",
-          resolution: {
-            width: 1280,
-            height: 720,
-          },
-        },
-      },
-    },
-    videoLinks: {
-      typeDef: {
-        type: "localized",
-        locales: ["en", "th"],
-        itemTypeDef: {
-          type: "array",
-          itemTypeDef: {
-            type: "string",
-            format: "url",
-          },
+        type: "image",
+        resolution: {
+          height: 300,
+          width: 90,
         },
       },
     },
   },
   layout: {
-    posters: {
-      component: "ImageMultiUpload_FormField",
-      attributes: {
-        label: "Posters",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
-      },
-      target: "posters",
-    },
-    banner: {
+    sponsorLogo: {
       component: "ImageUpload_FormField",
-      size: "1/2",
       attributes: {
-        label: "Banner",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
+        label: "Sponsor Logo",
       },
-      target: "banner",
-    },
-    shareBanner: {
-      component: "ImageUpload_FormField",
-      size: "1/2",
-      attributes: {
-        label: "Share Banner",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
-      },
-      target: "shareBanner",
-    },
-    videoLinks: {
-      component: "TextItems_FormField",
-      attributes: {
-        label: "Video Links",
-      },
-      target: "videoLinks",
+      docs: [
+        "The screen logo will be fallback to default logo if this is empty.",
+      ],
+      target: "sponsorLogo",
     },
   },
 };

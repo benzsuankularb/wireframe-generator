@@ -39,10 +39,6 @@ export const eventAction_editMedia: ActionSchema = {
       component: "ImageMultiUpload_FormField",
       attributes: {
         label: "Posters",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
       },
       target: "posters",
     },

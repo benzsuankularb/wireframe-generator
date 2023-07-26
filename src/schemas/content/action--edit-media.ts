@@ -5,10 +5,10 @@ export const contentAction_editMedia: ActionSchema = {
   fields: {
     posters: {
       typeDef: {
-        type: "localized",
-        locales: ["en", "th"],
+        type: "array",
         itemTypeDef: {
-          type: "array",
+          type: "localized",
+          locales: ["en", "th"],
           itemTypeDef: {
             type: "image",
             resolution: {
@@ -64,10 +64,6 @@ export const contentAction_editMedia: ActionSchema = {
       component: "ImageMultiUpload_FormField",
       attributes: {
         label: "Posters",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
       },
       target: "posters",
     },
@@ -76,10 +72,6 @@ export const contentAction_editMedia: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Banner",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
       },
       target: "banner",
     },
@@ -88,10 +80,6 @@ export const contentAction_editMedia: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Share Banner",
-        resolution: {
-          width: 1280,
-          height: 720,
-        },
       },
       target: "shareBanner",
     },

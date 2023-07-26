@@ -3,13 +3,16 @@ import { ActionSchema } from "../../framework/schemas";
 export const screenAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
-    contentType: {
+    branch: {
       typeDef: {
         type: "entity",
-        class: "ContentType",
-        displayFormat: "%name",
+        class: "Branch",
+        displayFormat: "%brand %name",
         fields: {
           name: {
+            type: "string",
+          },
+          brand: {
             type: "string",
           },
         },
@@ -24,15 +27,10 @@ export const screenAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    shortName: {
-      typeDef: {
-        type: "string",
-      },
-    },
-    distributor: {
+    projectorSystem: {
       typeDef: {
         type: "entity",
-        class: "Distributor",
+        class: "ScreenProjectorSystem",
         displayFormat: "%name",
         fields: {
           name: {
@@ -41,27 +39,36 @@ export const screenAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    releaseDate: {
+    soundSystem: {
       typeDef: {
-        type: "dateTime",
-        dateOnly: true,
+        type: "entity",
+        class: "ScreenSoundSystem",
+        displayFormat: "%name",
+        fields: {
+          name: {
+            type: "string",
+          },
+        },
       },
     },
-    rereleaseDate: {
+    defaultLogo: {
       typeDef: {
-        type: "dateTime",
-        dateOnly: true,
+        type: "image",
+        resolution: {
+          height: 300,
+          width: 90,
+        },
       },
     },
   },
   layout: {
-    contentType: {
+    branch: {
       component: "EntityPicker_FormField",
+      size: "1/2",
       attributes: {
-        label: "Content Type",
+        label: "Branch",
       },
-      target: "contentType",
-      samples: ["Concert", "Movie", "Documentary"],
+      target: "branch",
     },
     name: {
       component: "Text_FormField",
@@ -71,34 +78,28 @@ export const screenAction_editGeneralInfo: ActionSchema = {
       },
       target: "name",
     },
-    shortName: {
-      component: "Text_FormField",
+    projectorSystem: {
+      component: "EntityPicker_FormField",
       size: "1/2",
       attributes: {
-        label: "Short Name",
+        label: "Projector System",
       },
-      target: "shortName",
+      target: "projectorSystem",
     },
-    distributor: {
+    soundSystem: {
       component: "EntityPicker_FormField",
+      size: "1/2",
       attributes: {
-        label: "Distributor",
+        label: "Sound System",
       },
-      target: "distributor",
+      target: "soundSystem",
     },
-    releaseDate: {
-      component: "DatePicker_FormField",
+    defaultLogo: {
+      component: "ImageUpload_FormField",
       attributes: {
-        label: "Release Date",
+        label: "Default Logo",
       },
-      target: "releaseDate",
-    },
-    reReleaseDate: {
-      component: "DatePicker_FormField",
-      attributes: {
-        label: "Re-release Date",
-      },
-      target: "reReleaseDate",
+      target: "defaultLogo",
     },
   },
 };
