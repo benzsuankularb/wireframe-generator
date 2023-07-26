@@ -1,16 +1,15 @@
 import { ActionLayout } from "../../../framework/components/action-layout";
-import { useSelectorSchemaRef } from "../../../framework/contexts/selector-layout";
 import Image from "./image.png";
 
 export function EntityEdit(props: {
-  sections: { name: string; schemaRef: string }[];
+  sections: { name: string; schema: string }[];
 }) {
   return (
     <div className="w-[500px] flex flex-col">
       {props.sections.map((section) => [
         <EntityEditSection
           name={section.name}
-          schemaRef={section.schemaRef}
+          schema={section.schema}
           key={section.name}
         />,
       ])}
@@ -20,12 +19,11 @@ export function EntityEdit(props: {
 
 function EntityEditSection({
   name,
-  schemaRef,
+  schema: schemaName,
 }: {
   name: string;
-  schemaRef: string;
+  schema: string;
 }) {
-  const { schema } = useSelectorSchemaRef(schemaRef);
   return (
     <div className="flex flex-col">
       <div className="w-full relative">
@@ -35,7 +33,7 @@ function EntityEditSection({
         <img src={Image} className="w-full" />
       </div>
       <div className="w-full">
-        <ActionLayout schema={schema} />
+        <ActionLayout schema={schemaName} />
       </div>
     </div>
   );

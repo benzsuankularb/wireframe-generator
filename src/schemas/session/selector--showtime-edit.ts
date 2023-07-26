@@ -11,24 +11,12 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
     },
   },
   schemas: {
-    editStatus: {
-      schema: "sessionAction_editStatus",
-    },
-    editProgram: {
-      schema: "sessionAction_editProgram",
-    },
-    editTiming: {
-      schema: "sessionAction_editTiming",
-    },
-    editDuration: {
-      schema: "sessionAction_editDuration",
-    },
-    editEvent: {
-      schema: "sessionAction_editEvent",
-    },
-    editSaleRestrictions: {
-      schema: "sessionAction_editSaleRestrictions",
-    },
+    sessionAction_editStatus: {},
+    sessionAction_editProgram: {},
+    sessionAction_editTiming: {},
+    sessionAction_editDuration: {},
+    sessionAction_editEvent: {},
+    sessionAction_editSaleRestrictions: {},
   },
   layout: {
     component: "EntityEdit",
@@ -36,27 +24,27 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
       sections: [
         {
           name: "Status",
-          schemaRef: "editStatus",
+          schema: "sessionAction_editStatus",
         },
         {
           name: "Program",
-          schemaRef: "editProgram",
+          schema: "sessionAction_editProgram",
         },
         {
           name: "Timing",
-          schemaRef: "editTiming",
+          schema: "sessionAction_editTiming",
         },
         {
           name: "Duration",
-          schemaRef: "editDuration",
+          schema: "sessionAction_editDuration",
         },
         {
           name: "Event",
-          schemaRef: "editEvent",
+          schema: "sessionAction_editEvent",
         },
         {
           name: "Sale Restrictions",
-          schemaRef: "editSaleRestrictions",
+          schema: "sessionAction_editSaleRestrictions",
         },
       ],
     },

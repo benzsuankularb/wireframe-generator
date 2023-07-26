@@ -3,12 +3,8 @@ import { SelectorSchema } from "../../framework/schemas";
 export const timingSelector_edit: SelectorSchema = {
   type: "selector",
   schemas: {
-    editSessions: {
-      schema: "timingAction_editSessions",
-    },
-    editInitialTime: {
-      schema: "timingAction_editInitialTime",
-    },
+    timingAction_editSessions: {},
+    timingAction_editInitialTime: {},
   },
   layout: {
     component: "EntityEdit",
@@ -16,11 +12,11 @@ export const timingSelector_edit: SelectorSchema = {
       sections: [
         {
           name: "Sessions",
-          schemaRef: "editSessions",
+          schema: "timingAction_editSessions",
         },
         {
           name: "Initial Times",
-          schemaRef: "editInitialTime",
+          schema: "timingAction_editInitialTime",
         },
       ],
     },

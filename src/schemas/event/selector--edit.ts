@@ -3,27 +3,13 @@ import { SelectorSchema } from "../../framework/schemas";
 export const eventSelector_edit: SelectorSchema = {
   type: "selector",
   schemas: {
-    editGeneralInfo: {
-      schema: "eventAction_editGeneralInfo",
-    },
-    editPeriod: {
-      schema: "eventAction_editPeriod",
-    },
-    editSaleRestrictions: {
-      schema: "eventAction_editSaleRestrictions",
-    },
-    editWebsite: {
-      schema: "eventAction_editWebsite",
-    },
-    editMedia: {
-      schema: "eventAction_editMedia",
-    },
-    editContents: {
-      schema: "eventAction_editContents",
-    },
-    editFeatured: {
-      schema: "eventAction_editFeatured",
-    },
+    eventAction_editGeneralInfo: {},
+    eventAction_editPeriod: {},
+    eventAction_editSaleRestrictions: {},
+    eventAction_editWebsite: {},
+    eventAction_editMedia: {},
+    eventAction_editContents: {},
+    eventAction_editFeatured: {},
   },
   layout: {
     component: "EntityEdit",
@@ -31,31 +17,31 @@ export const eventSelector_edit: SelectorSchema = {
       sections: [
         {
           name: "General Info",
-          schemaRef: "editGeneralInfo",
+          schema: "eventAction_editGeneralInfo",
         },
         {
           name: "Period",
-          schemaRef: "editPeriod",
+          schema: "eventAction_editPeriod",
         },
         {
           name: "Sale Restrictions",
-          schemaRef: "editSaleRestrictions",
+          schema: "eventAction_editSaleRestrictions",
         },
         {
           name: "🟥 Website",
-          schemaRef: "editWebsite",
+          schema: "eventAction_editWebsite",
         },
         {
           name: "🟥 Media",
-          schemaRef: "editMedia",
+          schema: "eventAction_editMedia",
         },
         {
           name: "🟥 Featured",
-          schemaRef: "editFeatured",
+          schema: "eventAction_editFeatured",
         },
         {
           name: "Contents",
-          schemaRef: "editContents",
+          schema: "eventAction_editContents",
         },
       ],
     },

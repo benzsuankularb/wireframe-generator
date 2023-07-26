@@ -12,14 +12,18 @@ import { ValuePicker_FormField } from "./value-picker--form-field";
 
 export const formFieldComponents = {
   DatePicker_FormField,
-  EntityMultiPicker_FormField,
-  TextItems_FormField,
-  ReadOnly_FormField,
-  ValuePicker_FormField,
-  EntityOrderer_FormField,
-  EntityPicker_FormField,
-  ImageMultiUpload_FormField,
-  ImageUpload_FormField,
-  Text_FormField,
+  Text_FormField, // Support i18n
   Toggle_FormField,
+  ValuePicker_FormField, // Radio, dropdown
+  // FreeText_FormField,
+  // Number_FormField,
+  ImageUpload_FormField, // Support i18n
+  ImageMultiUpload_FormField, // Support i18n
+  ReadOnly_FormField, // Support multiple types
+
+  // TODO explain to dev
+  TextItems_FormField,
+  EntityPicker_FormField,
+  EntityMultiPicker_FormField,
+  EntityOrderer_FormField,
 };

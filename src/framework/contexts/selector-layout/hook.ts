@@ -5,12 +5,13 @@ import { useSchema } from "..";
 import { SelectorSchema } from "../../schemas";
 import { InternalSelectorLayoutContext } from "./context";
 
-export const useSelectorSchemaRef = (name: string) => {
+export const useSelectorSchema = (name: string) => {
   const ctx = useContext(InternalSelectorLayoutContext);
-  const { selector } = ctx;
-  const selectorSchema = useSchema(selector) as SelectorSchema;
-  const schemaRef = (selectorSchema.schemas ?? {})[name];
-  const { schema, exports, imports } = schemaRef;
+  const { selector: selectorName } = ctx;
+  const selector = useSchema(selectorName) as SelectorSchema;
+  const schema = useSchema(name);
+  const selectorSchema = (selector.schemas ?? {})[name];
+  const { exports, imports } = selectorSchema;
   return { schema, exports, imports };
 };
 

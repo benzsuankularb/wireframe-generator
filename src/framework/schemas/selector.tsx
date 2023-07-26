@@ -27,7 +27,6 @@ export type SelectorSchema_Field = {
 };
 
 export type SelectorSchema_Schema = {
-  schema: string;
   exports?: { [targetField: string]: string };
   imports?: { [targetField: string]: string };
 };
