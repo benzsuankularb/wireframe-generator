@@ -32,9 +32,10 @@ export const eventAction_editFeatured: ActionSchema = {
       target: "showOnFeatured",
     },
     ordering: {
-      component: "EntityOrderer_FormField",
+      component: "EntityTable_FormField",
       attributes: {
         label: "Ordering",
+        orderable: "self",
       },
       target: "ordering",
       docs: ["Only visible when `Show on Feature` is on."],

@@ -17,7 +17,12 @@ export type TypeDefinition_String = {
   enum?: string[];
   min?: number;
   max?: number;
-  format?: "url" | "email" | "integer" | { regex: string; name: string };
+  format?:
+    | "url"
+    | "email"
+    | "integer"
+    | "color"
+    | { regex: string; name: string };
 };
 
 export type TypeDefinition_Localized = {

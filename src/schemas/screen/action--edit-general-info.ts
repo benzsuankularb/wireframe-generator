@@ -27,6 +27,12 @@ export const screenAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
+    number: {
+      typeDef: {
+        type: "number",
+        max: 100,
+      },
+    },
     projectorSystem: {
       typeDef: {
         type: "entity",
@@ -69,6 +75,15 @@ export const screenAction_editGeneralInfo: ActionSchema = {
         label: "Branch",
       },
       target: "branch",
+    },
+    number: {
+      component: "Text_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Number",
+      },
+      docs: ["Will get error if the number is used by other screen."],
+      target: "number",
     },
     name: {
       component: "Text_FormField",

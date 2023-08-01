@@ -1,6 +1,6 @@
 import { SelectorSchema } from "../../framework/schemas";
 
-export const screenSelector_edit: SelectorSchema = {
+export const screenZoneSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {
     event: {
@@ -11,9 +11,8 @@ export const screenSelector_edit: SelectorSchema = {
     },
   },
   schemas: {
-    screenAction_editGeneralInfo: {},
-    screenAction_editSponsor: {},
-    screenAction_editLayouts: {},
+    screenZoneAction_editGeneralInfo: {},
+    screenZoneAction_editSaleRestrictions: {},
   },
   layout: {
     component: "EntityEdit",
@@ -21,15 +20,11 @@ export const screenSelector_edit: SelectorSchema = {
       sections: [
         {
           name: "General Info",
-          schema: "screenAction_editGeneralInfo",
+          schema: "screenZoneAction_editGeneralInfo",
         },
         {
-          name: "Sponsor",
-          schema: "screenAction_editSponsor",
-        },
-        {
-          name: "Layouts",
-          schema: "screenAction_editLayouts",
+          name: "Sale Restrictions",
+          schema: "screenZoneAction_editSaleRestrictions",
         },
       ],
     },

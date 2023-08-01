@@ -4,6 +4,7 @@ import { TypeDefinition } from "./data-types";
 
 export type SelectorSchema = {
   type: "selector";
+  class?: string;
   globalFields?: { [name: string]: SelectorSchema_GlobalField };
   fields?: { [name: string]: SelectorSchema_Field };
   schemas?: { [name: string]: SelectorSchema_Schema };
@@ -12,16 +13,12 @@ export type SelectorSchema = {
 
 export type SelectorSchema_GlobalField = {
   typeDef: TypeDefinition;
-  external?: boolean;
-  readOnly?: boolean;
   docs?: string[];
   samples?: string[];
 };
 
 export type SelectorSchema_Field = {
   typeDef: TypeDefinition;
-  sortable?: boolean;
-  searchable?: boolean;
   docs?: string[];
   samples?: string[];
 };

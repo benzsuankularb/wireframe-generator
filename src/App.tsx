@@ -5,9 +5,11 @@ import { pageSpecificComponents } from "./components/page-specifics";
 import { selectorComponents } from "./components/selectors";
 import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
+import { branchSchemas } from "./schemas/branch";
 import { contentSchemas } from "./schemas/content";
 import { eventSchemas } from "./schemas/event";
 import { screenSchemas } from "./schemas/screen";
+import { screenZoneSchemas } from "./schemas/screen-zone";
 import { sessionSchemas } from "./schemas/session";
 import { timingSchemas } from "./schemas/timing";
 
@@ -24,11 +26,13 @@ function App() {
           ...pageSpecificComponents,
         }}
         schemas={{
+          ...branchSchemas,
           ...screenSchemas,
           ...eventSchemas,
           ...contentSchemas,
           ...timingSchemas,
           ...sessionSchemas,
+          ...screenZoneSchemas,
         }}
       >
         <div className="h-screen">

@@ -11,35 +11,23 @@ export const contentSelector_edit: SelectorSchema = {
     },
   },
   schemas: {
-    editActivation: {
-      schema: "contentAction_editActivation",
-    },
-    editGeneralInfo: {
-      schema: "contentAction_editGeneralInfo",
-    },
-    editContentInfo: {
-      schema: "contentAction_editContentInfo",
-    },
-    editDuration: {
-      schema: "contentAction_editDuration",
-    },
-    editFormat: {
-      schema: "contentAction_editFormat",
-    },
-    editEvent: {
-      schema: "contentAction_editEvent",
+    contentAction_create: {}, //global
+
+    contentAction_copy: {},
+    contentAction_delete: {},
+    contentAction_editActivation: {},
+    contentAction_editGeneralInfo: {},
+    contentAction_editContentInfo: {},
+    contentAction_editDuration: {},
+    contentAction_editFormat: {},
+    contentAction_editEvent: {
       exports: {
         event: "event",
       },
     },
-    editMedia: {
-      schema: "contentAction_editMedia",
-    },
-    editCastCrews: {
-      schema: "contentAction_editCastCrews",
-    },
-    editSaleRestrictions: {
-      schema: "contentAction_editSaleRestrictions",
+    contentAction_editMedia: {},
+    contentAction_editCastCrews: {},
+    contentAction_editSaleRestrictions: {
       imports: {
         event: "event",
       },
@@ -48,42 +36,54 @@ export const contentSelector_edit: SelectorSchema = {
   layout: {
     component: "EntityEdit",
     attributes: {
+      actionButtons: [
+        {
+          name: "Delete",
+          schema: "delete",
+          mode: "danger",
+        },
+        {
+          name: "Copy",
+          schema: "delete",
+          mode: "danger",
+        },
+      ],
       sections: [
         {
           name: "Activation",
-          schemaRef: "editActivation",
+          schema: "contentAction_editActivation",
         },
         {
           name: "General Info",
-          schemaRef: "editGeneralInfo",
+          schema: "contentAction_editGeneralInfo",
         },
         {
           name: "Content Info",
-          schemaRef: "editContentInfo",
+          schema: "contentAction_editContentInfo",
         },
         {
           name: "Duration",
-          schemaRef: "editDuration",
+          schema: "contentAction_editDuration",
         },
         {
           name: "Formating",
-          schemaRef: "editFormat",
+          schema: "contentAction_editFormat",
         },
         {
           name: "Event",
-          schemaRef: "editEvent",
+          schema: "contentAction_editEvent",
         },
         {
           name: "Media",
-          schemaRef: "editMedia",
+          schema: "contentAction_editMedia",
         },
         {
           name: "Cast & Crews",
-          schemaRef: "editCastCrews",
+          schema: "contentAction_editCastCrews",
         },
         {
           name: "Sale Restrictions",
-          schemaRef: "editSaleRestrictions",
+          schema: "contentAction_editSaleRestrictions",
         },
       ],
     },
