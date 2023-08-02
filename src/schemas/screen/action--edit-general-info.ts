@@ -73,48 +73,48 @@ export const screenAction_editGeneralInfo: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Branch",
+        target: "branch",
       },
-      target: "branch",
     },
     number: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Number",
+        target: "number",
       },
       docs: ["Will get error if the number is used by other screen."],
-      target: "number",
     },
     name: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Name",
+        target: "name",
       },
-      target: "name",
     },
     projectorSystem: {
       component: "EntityPicker_FormField",
       size: "1/2",
       attributes: {
         label: "Projector System",
+        target: "projectorSystem",
       },
-      target: "projectorSystem",
     },
     soundSystem: {
       component: "EntityPicker_FormField",
       size: "1/2",
       attributes: {
         label: "Sound System",
+        target: "soundSystem",
       },
-      target: "soundSystem",
     },
     defaultLogo: {
       component: "ImageUpload_FormField",
       attributes: {
         label: "Default Logo",
+        target: "defaultLogo",
       },
-      target: "defaultLogo",
     },
   },
 };

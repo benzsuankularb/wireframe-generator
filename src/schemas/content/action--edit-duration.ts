@@ -31,26 +31,26 @@ export const contentAction_editDuration: ActionSchema = {
       attributes: {
         label: "Duration",
         suffix: "Mins",
+        target: "duration",
       },
-      target: "duration",
     },
     preBreakContentDuration: {
       component: "Text_FormField",
       attributes: {
         label: "Pre-break Content Duration",
         suffix: "Mins",
+        target: "preBreakContentDuration",
       },
       docs: ["Empty means there is no break for this content"],
-      target: "preBreakContentDuration",
     },
     breakDuration: {
       component: "Text_FormField",
       attributes: {
         label: "Break Duration",
         suffix: "Mins",
+        target: "breakDuration",
       },
       docs: ["Allow empty"],
-      target: "breakDuration",
     },
   },
 };

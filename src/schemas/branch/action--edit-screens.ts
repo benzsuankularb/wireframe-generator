@@ -21,8 +21,8 @@ export const branchAction_editScreens: ActionSchema = {
       component: "EntityTable_FormField",
       attributes: {
         label: "Screens",
+        target: "screens",
       },
-      target: "screens",
     },
   },
 };

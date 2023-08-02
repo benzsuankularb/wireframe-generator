@@ -47,43 +47,43 @@ export const branchAction_editContract: ActionSchema = {
       component: "Text_FormField",
       attributes: {
         label: "Phone 1",
+        target: "phone1",
       },
-      target: "phone1",
     },
     phone2: {
       component: "Text_FormField",
       attributes: {
         label: "Phone 2",
+        target: "phone2",
       },
-      target: "phone2",
     },
     fax: {
       component: "Text_FormField",
       attributes: {
         label: "Fax",
+        target: "fax",
       },
-      target: "fax",
     },
     openHours: {
       component: "FreeText_FormField",
       attributes: {
         label: "Opening Hours",
+        target: "openHours",
       },
-      target: "openHours",
     },
     transportation: {
       component: "FreeText_FormField",
       attributes: {
         label: "Transportation",
+        target: "transportation",
       },
-      target: "transportation",
     },
     geolocation: {
       component: "GeolocationPicker_FormField",
       attributes: {
         label: "Map Position",
+        target: "geolocation",
       },
-      target: "geolocation",
     },
   },
 };

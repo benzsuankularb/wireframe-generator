@@ -35,8 +35,8 @@ export const sessionAction_editTicket: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Screen Layout",
+        target: "layout",
       },
-      target: "layout",
       docs: [
         "Use the default layout with newly created session", //
       ],
@@ -46,8 +46,8 @@ export const sessionAction_editTicket: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Price Card",
+        target: "price card",
       },
-      target: "price card",
       docs: [
         "Default is empty", //
         "Unable to open the session if no price card",

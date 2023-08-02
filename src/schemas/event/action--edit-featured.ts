@@ -28,16 +28,16 @@ export const eventAction_editFeatured: ActionSchema = {
       component: "Toggle_FormField",
       attributes: {
         label: "Show on Featured",
+        target: "showOnFeatured",
       },
-      target: "showOnFeatured",
     },
     ordering: {
       component: "EntityTable_FormField",
       attributes: {
         label: "Ordering",
         orderable: "self",
+        target: "ordering",
       },
-      target: "ordering",
       docs: ["Only visible when `Show on Feature` is on."],
     },
   },

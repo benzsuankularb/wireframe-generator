@@ -64,37 +64,37 @@ export const branchAction_editGeneralInfo: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Name",
+        target: "name",
       },
-      target: "name",
     },
     shortName: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Short Name",
+        target: "shortName",
       },
-      target: "shortName",
     },
     brand: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Brand",
+        target: "brand",
       },
-      target: "brand",
     },
     company: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Company",
+        target: "company",
       },
-      target: "company",
     },
     currency: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Currency",
+        target: "currency",
       },
-      target: "currency",
     },
   },
 };

@@ -40,24 +40,24 @@ export const contentAction_editContentInfo: ActionSchema = {
       attributes: {
         label: "Synopsis",
         multiline: true,
+        target: "synopsis",
       },
-      target: "synopsis",
     },
     description: {
       component: "Text_FormField",
       attributes: {
         label: "Description",
         multiline: true,
+        target: "description",
       },
-      target: "description",
     },
     ticketMessage: {
       component: "Text_FormField",
       attributes: {
         label: "Ticket Message",
         multiline: true,
+        target: "ticketMessage",
       },
-      target: "ticketMessage",
     },
   },
 };

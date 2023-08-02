@@ -64,31 +64,31 @@ export const contentAction_editMedia: ActionSchema = {
       component: "ImageMultiUpload_FormField",
       attributes: {
         label: "Posters",
+        target: "posters",
       },
-      target: "posters",
     },
     banner: {
       component: "ImageUpload_FormField",
       size: "1/2",
       attributes: {
         label: "Banner",
+        target: "banner",
       },
-      target: "banner",
     },
     shareBanner: {
       component: "ImageUpload_FormField",
       size: "1/2",
       attributes: {
         label: "Share Banner",
+        target: "shareBanner",
       },
-      target: "shareBanner",
     },
     videoLinks: {
       component: "TextItems_FormField",
       attributes: {
         label: "Video Links",
+        target: "videoLinks",
       },
-      target: "videoLinks",
     },
   },
 };

@@ -20,15 +20,15 @@ export const screenZoneAction_editGeneralInfo: ActionSchema = {
       component: "Text_FormField",
       attributes: {
         label: "Name",
+        target: "name",
       },
-      target: "name",
     },
     color: {
       component: "ColorPicker_FormField",
       attributes: {
         label: "Color",
+        target: "color",
       },
-      target: "color",
     },
   },
 };

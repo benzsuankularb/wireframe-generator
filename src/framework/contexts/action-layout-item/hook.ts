@@ -13,28 +13,14 @@ export const useLayoutItem = () => {
   return { actionSchema, layoutItemSchema };
 };
 
-export const useLayoutItemTarget = (id?: string) => {
-  const { layoutItemSchema, actionSchema } = useLayoutItem();
-  const target =
-    id !== undefined
-      ? (layoutItemSchema.target as { [key: string]: string })[id]
-      : layoutItemSchema.target;
-  if (typeof target !== "string") {
-    throw `invalid target ${id ?? ""}`;
+export const useActionField = (id: string) => {
+  const ctx = useContext(InternalActionLayoutItemContext);
+  const { action } = ctx;
+  const actionSchema = useSchema(action) as ActionSchema;
+  const fieldSchema = actionSchema.fields[id];
+  if (!fieldSchema) {
+    throw "invalid field";
   }
-  const targetSchema = actionSchema.fields[target];
-  return { targetSchema };
-};
 
-export const useLayoutItemSource = (id?: string) => {
-  const { layoutItemSchema, actionSchema } = useLayoutItem();
-  const source =
-    id !== undefined
-      ? (layoutItemSchema.source as { [key: string]: string })[id]
-      : layoutItemSchema.source;
-  if (typeof source !== "string") {
-    throw `invalid source ${id ?? ""}`;
-  }
-  const sourceSchema = actionSchema.fields[source];
-  return { sourceSchema };
+  return { fieldSchema };
 };

@@ -53,43 +53,43 @@ export const sessionAction_editDuration: ActionSchema = {
       attributes: {
         label: "Pre-session Duration",
         suffix: "Mins",
+        target: "preSessionDuration",
       },
-      target: "preSessionDuration",
     },
     cleanupDuration: {
       component: "Text_FormField",
       attributes: {
         label: "Cleanup Duration",
         suffix: "Mins",
+        target: "cleanupDuration",
       },
-      target: "cleanupDuration",
     },
     contentDuration: {
       component: "ReadOnly_FormField",
       attributes: {
         label: "Break Duration",
         suffix: "Mins",
+        target: "contentDuration",
       },
       samples: ["95 Mins"],
-      target: "contentDuration",
     },
     preBreakContentDuration: {
       component: "ReadOnly_FormField",
       attributes: {
         label: "Break Duration",
         suffix: "Mins",
+        target: "preBreakContentDuration",
       },
       samples: ["60 Mins"],
-      target: "preBreakContentDuration",
     },
     breakDuration: {
       component: "ReadOnly_FormField",
       attributes: {
         label: "Break Duration",
         suffix: "Mins",
+        target: "breakDuration",
       },
       samples: ["10 Mins"],
-      target: "breakDuration",
     },
     totalDuration: {
       component: "SessionTotalDuration_FormField",

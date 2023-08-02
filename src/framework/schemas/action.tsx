@@ -26,8 +26,6 @@ export type ActionSchema_LayoutItem = {
   component: string;
   size?: "1/2" | "1";
   attributes?: { [key: string]: any };
-  target?: string | { [key: string]: string }; //TODO remove
-  source?: string | { [key: string]: string }; //TODO remove
   docs?: string[];
   samples?: string[];
 };

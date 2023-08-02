@@ -22,9 +22,9 @@ export const sessionAction_editStatus: ActionSchema = {
           inactive: "Inactive",
           closed: "Closed",
         },
+        target: "status",
       },
       docs: ["Readonly in program manager"],
-      target: "status",
     },
   },
 };

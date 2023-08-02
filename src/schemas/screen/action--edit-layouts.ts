@@ -21,9 +21,9 @@ export const screenAction_editLayouts: ActionSchema = {
       component: "EntityTable_FormField",
       attributes: {
         label: "Layouts",
+        target: "layouts",
       },
       docs: ["Click on the item to open the layout manager"],
-      target: "layouts",
     },
   },
 };

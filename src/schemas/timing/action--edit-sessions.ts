@@ -22,16 +22,16 @@ export const timingAction_editSessions: ActionSchema = {
       attributes: {
         label: "Default Pre-session Duration",
         suffix: "Mins",
+        target: "defaultPreSessionDuration",
       },
-      target: "defaultPreSessionDuration",
     },
     defaultCleanupDuration: {
       component: "Text_FormField",
       attributes: {
         label: "Default Cleanup Duration",
         suffix: "Mins",
+        target: "defaultCleanupDuration",
       },
-      target: "defaultCleanupDuration",
     },
   },
 };

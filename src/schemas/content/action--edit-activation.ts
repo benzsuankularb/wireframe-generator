@@ -20,8 +20,8 @@ export const contentAction_editActivation: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Status",
+        target: "status",
       },
-      target: "status",
       docs: [
         "By setting inactive, Operator will unable to see and create the new sessions",
         "By setting inactive, Customer will unable to see in the website",

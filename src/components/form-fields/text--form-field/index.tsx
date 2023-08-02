@@ -1,4 +1,4 @@
-import { useLayoutItemTarget } from "../../../framework/contexts";
+import { useActionField } from "../../../framework/contexts";
 import { LayoutItemRemark } from "../../common/layout-item-remark";
 import ImageMultiline from "./image-multiline.png";
 import Image from "./image.png";
@@ -7,13 +7,15 @@ export function Text_FormField({
   label,
   multiline,
   suffix,
+  target,
 }: {
   label: string;
   multiline: string;
   suffix?: string;
+  target: string;
 }) {
-  const { targetSchema } = useLayoutItemTarget();
-  const dataType = targetSchema.typeDef.type;
+  const { fieldSchema } = useActionField(target);
+  const dataType = fieldSchema.typeDef.type;
   return (
     <div className="relative text-black">
       <LayoutItemRemark />

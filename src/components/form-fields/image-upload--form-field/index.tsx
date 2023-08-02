@@ -1,11 +1,16 @@
-import { useLayoutItemTarget } from "../../../framework/contexts";
+import { useActionField } from "../../../framework/contexts";
 import { LayoutItemRemark } from "../../common/layout-item-remark";
 import Image from "./image.png";
 
-export function ImageUpload_FormField({ label }: { label: string }) {
-  const { targetSchema } = useLayoutItemTarget();
-
-  let imageTypeDef = targetSchema.typeDef;
+export function ImageUpload_FormField({
+  label,
+  target,
+}: {
+  label: string;
+  target: string;
+}) {
+  const { fieldSchema } = useActionField(target);
+  let imageTypeDef = fieldSchema.typeDef;
   while (imageTypeDef.type !== "image") {
     if (imageTypeDef.type === "nullable") {
       imageTypeDef = imageTypeDef.typeDef;
@@ -22,7 +27,7 @@ export function ImageUpload_FormField({ label }: { label: string }) {
       <LayoutItemRemark />
       <div className="absolute top-2 left-2">
         {label}
-        {targetSchema.typeDef.type === "localized" ? " 🌎" : undefined}
+        {fieldSchema.typeDef.type === "localized" ? " 🌎" : undefined}
       </div>
       {resolution ? (
         <div className="absolute bottom-[5px] left-[120px]">

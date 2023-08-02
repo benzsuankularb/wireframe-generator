@@ -24,8 +24,8 @@ export const sessionAction_editEvent: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Event",
+        target: "event",
       },
-      target: "event",
       docs: ["Empty is allowed"],
       samples: ["Music Fest 2023"],
     },

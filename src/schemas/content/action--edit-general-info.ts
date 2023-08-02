@@ -59,8 +59,8 @@ export const contentAction_editGeneralInfo: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Content Type",
+        target: "contentType",
       },
-      target: "contentType",
       samples: ["Concert", "Movie", "Documentary"],
     },
     name: {
@@ -68,37 +68,37 @@ export const contentAction_editGeneralInfo: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Name",
+        target: "name",
       },
-      target: "name",
     },
     shortName: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Short Name",
+        target: "shortName",
       },
-      target: "shortName",
     },
     distributor: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Distributor",
+        target: "distributor",
       },
-      target: "distributor",
     },
     releaseDate: {
       component: "DatePicker_FormField",
       attributes: {
         label: "Release Date",
+        target: "releaseDate",
       },
-      target: "releaseDate",
     },
     reReleaseDate: {
       component: "DatePicker_FormField",
       attributes: {
         label: "Re-release Date",
+        target: "reReleaseDate",
       },
-      target: "reReleaseDate",
     },
   },
 };

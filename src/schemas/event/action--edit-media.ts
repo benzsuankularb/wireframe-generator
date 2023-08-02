@@ -39,8 +39,8 @@ export const eventAction_editMedia: ActionSchema = {
       component: "ImageMultiUpload_FormField",
       attributes: {
         label: "Posters",
+        target: "posters",
       },
-      target: "posters",
     },
     agenda: {
       component: "ImageUpload_FormField",
@@ -51,15 +51,15 @@ export const eventAction_editMedia: ActionSchema = {
           width: 1280,
           height: 720,
         },
+        target: "agenda",
       },
-      target: "agenda",
     },
     agendaLink: {
       component: "Text_FormField",
       attributes: {
         label: "Agenda URL",
+        target: "agendaLink",
       },
-      target: "agendaLink",
     },
   },
 };

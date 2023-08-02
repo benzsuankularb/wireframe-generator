@@ -31,8 +31,8 @@ export const timingAction_editInitialTime: ActionSchema = {
           5: "Sat",
           6: "Sun",
         },
+        target: "initialDayOfWeek",
       },
-      target: "initialDayOfWeek",
     },
     initialHourOfDay: {
       component: "Text_FormField",

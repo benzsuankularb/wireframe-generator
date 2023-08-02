@@ -34,9 +34,9 @@ export const contentAction_editCastCrews: ActionSchema = {
       component: "CastCrewItems_FormField",
       attributes: {
         label: "Cast & Crews",
+        target: "castCrews",
       },
       docs: ["Orderable"],
-      target: "castCrews",
     },
   },
 };

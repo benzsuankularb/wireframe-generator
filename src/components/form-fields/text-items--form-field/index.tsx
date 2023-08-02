@@ -1,10 +1,16 @@
-import { useLayoutItemTarget } from "../../../framework/contexts";
+import { useActionField } from "../../../framework/contexts";
 import { LayoutItemRemark } from "../../common/layout-item-remark";
 import Image from "./image.png";
 
-export function TextItems_FormField({ label }: { label: string }) {
-  const { targetSchema } = useLayoutItemTarget();
-  const dataType = targetSchema.typeDef.type;
+export function TextItems_FormField({
+  label,
+  target,
+}: {
+  label: string;
+  target: string;
+}) {
+  const { fieldSchema } = useActionField(target);
+  const dataType = fieldSchema.typeDef.type;
   return (
     <div className="relative text-black">
       <LayoutItemRemark />

@@ -99,9 +99,9 @@ export const contentAction_editFormat: ActionSchema = {
       component: "EntityMultiPicker_FormField",
       attributes: {
         label: "Content Format Options",
+        target: "formatOptions",
       },
       size: "1/2",
-      target: "formatOptions",
       docs: ["Empty is allowed"],
       samples: ["3D", "2D", "IMAX"],
     },
@@ -109,9 +109,9 @@ export const contentAction_editFormat: ActionSchema = {
       component: "EntityMultiPicker_FormField",
       attributes: {
         label: "Content Categories",
+        target: "categories",
       },
       size: "1/2",
-      target: "categories",
       docs: ["Empty is allowed"],
       samples: ["Horror", "Action", "Comedy"],
     },
@@ -119,33 +119,33 @@ export const contentAction_editFormat: ActionSchema = {
       component: "EntityMultiPicker_FormField",
       attributes: {
         label: "Audio Language Options",
+        target: "audioLanguageOptions",
       },
       size: "1/2",
-      target: "audioLanguageOptions",
     },
     defaultAudioLanguage: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Default Audio Language",
+        target: "defaultAudioLanguage",
       },
       size: "1/2",
-      target: "defaultAudioLanguage",
     },
     subtitleLanguageOptions: {
       component: "EntityMultiPicker_FormField",
       attributes: {
         label: "Subtitle Language Options",
+        target: "subtitleLanguageOptions",
       },
       size: "1/2",
-      target: "subtitleLanguageOptions",
     },
     defaultSubtitleLanguage: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Default Subtitle Language",
+        target: "defaultSubtitleLanguage",
       },
       size: "1/2",
-      target: "defaultSubtitleLanguage",
     },
   },
 };

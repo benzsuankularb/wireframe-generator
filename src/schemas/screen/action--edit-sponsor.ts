@@ -18,11 +18,11 @@ export const screenAction_editSponsor: ActionSchema = {
       component: "ImageUpload_FormField",
       attributes: {
         label: "Sponsor Logo",
+        target: "sponsorLogo",
       },
       docs: [
         "The screen logo will be fallback to default logo if this is empty.",
       ],
-      target: "sponsorLogo",
     },
   },
 };

@@ -33,22 +33,22 @@ export const eventAction_editWebsite: ActionSchema = {
       component: "Text_FormField",
       attributes: {
         label: "Web URL",
+        target: "link",
       },
-      target: "link",
     },
     headerName: {
       component: "Text_FormField",
       attributes: {
         label: "Header Name",
+        target: "headerName",
       },
-      target: "headerName",
     },
     graphicLink: {
       component: "Text_FormField",
       attributes: {
         label: "Graphic URL",
+        target: "graphicLink",
       },
-      target: "graphicLink",
     },
   },
 };

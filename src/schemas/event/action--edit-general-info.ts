@@ -50,32 +50,32 @@ export const eventAction_editGeneralInfo: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Name",
+        target: "name",
       },
-      target: "name",
     },
     shortName: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
         label: "Short Name",
+        target: "shortName",
       },
-      target: "shortName",
     },
     eventType: {
       component: "EntityPicker_FormField",
       size: "1/2",
       attributes: {
         label: "Type",
+        target: "eventType",
       },
-      target: "eventType",
     },
     description: {
       component: "Text_FormField",
       attributes: {
         label: "Description",
         multiline: true,
+        target: "description",
       },
-      target: "description",
     },
   },
 };

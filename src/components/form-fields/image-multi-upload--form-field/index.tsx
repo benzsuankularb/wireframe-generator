@@ -1,10 +1,16 @@
-import { useLayoutItemTarget } from "../../../framework/contexts";
+import { useActionField } from "../../../framework/contexts";
 import { LayoutItemRemark } from "../../common/layout-item-remark";
 import Image from "./image.png";
 
-export function ImageMultiUpload_FormField({ label }: { label: string }) {
-  const { targetSchema } = useLayoutItemTarget();
-  let imageTypeDef = targetSchema.typeDef;
+export function ImageMultiUpload_FormField({
+  label,
+  target,
+}: {
+  label: string;
+  target: string;
+}) {
+  const { fieldSchema } = useActionField(target);
+  let imageTypeDef = fieldSchema.typeDef;
   let hasLocalized = false;
   while (imageTypeDef.type !== "image") {
     if (imageTypeDef.type === "array") {

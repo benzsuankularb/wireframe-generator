@@ -36,15 +36,15 @@ export const branchAction_editLocation: ActionSchema = {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Country",
+        target: "country",
       },
-      target: "country",
     },
     zone: {
       component: "EntityPicker_FormField",
       attributes: {
         label: "Zone",
+        target: "zone",
       },
-      target: "zone",
     },
   },
 };

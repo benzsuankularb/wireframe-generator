@@ -93,8 +93,8 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Audience",
+        target: "audience",
       },
-      target: "audience",
       samples: ["No One", "Member Only", "Everyone"],
     },
     memberTypes: {
@@ -109,8 +109,8 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
             is: false,
           },
         ],
+        target: "memberTypes",
       },
-      target: "memberTypes",
       docs: [
         "Only visible when audience is `Member Only`",
         "Empty means all member types are restricted (Same as no one)",
@@ -121,24 +121,24 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       attributes: {
         label: "Promotions",
         searchable: true,
+        target: "promotions",
       },
       docs: ["Empty means no promotions restricted"],
-      target: "promotions",
     },
     allowComplementary: {
       component: "Toggle_FormField",
       attributes: {
         label: "Allow Complementary Promotions",
         searchable: true,
+        target: "allowComplementary",
       },
-      target: "allowComplementary",
     },
     saleChannels: {
       component: "EntityMultiPicker_FormField",
       attributes: {
         label: "Sale Channels",
+        target: "saleChannels",
       },
-      target: "saleChannels",
       docs: ["Empty means no sale channel restricted"],
       samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
     },
@@ -146,24 +146,24 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       component: "DatePicker_FormField",
       attributes: {
         label: "Sale Start",
+        target: "startTime",
       },
-      target: "startTime",
       docs: ["Empty means no starting sale time restricted"],
     },
     endTime: {
       component: "DatePicker_FormField",
       attributes: {
         label: "Sale End",
+        target: "endTime",
       },
-      target: "endTime",
       docs: ["Empty means no ending sale time restricted"],
     },
     allowSeatSelection: {
       component: "Toggle_FormField",
       attributes: {
         label: "Allow Seat Selection",
+        target: "allowSeatSelection",
       },
-      target: "allowSeatSelection",
       docs: [
         "Default is on",
         "User couldn't select their seat's position this if turned off",
