@@ -13,6 +13,7 @@ import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
 import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
+import { ticketTypeSchemas } from "./schemas/ticket-type";
 import { timingSchemas } from "./schemas/timing";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           ...screenZoneSchemas,
           ...currencySchemas,
           ...seatTypeSchemas,
+          ...ticketTypeSchemas,
         }}
       >
         <div className="h-screen">

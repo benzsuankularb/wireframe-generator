@@ -12,7 +12,7 @@ export const seatTypeAction_editSeat: ActionSchema = {
         },
       },
     },
-    continuousSeats: {
+    seatCount: {
       typeDef: {
         type: "number",
         min: 1,
@@ -36,15 +36,15 @@ export const seatTypeAction_editSeat: ActionSchema = {
       docs: [
         "Empty mean this seat type is actually the physical seat it self",
         "i.g. Select First Class seat when this is a Single First Class seat",
-        "Dropdown will only show seat type which have no 'Same Physical Seat As' setted",
+        "Dropdown will only show seat type which have no 'Same Physical Seat As' value",
       ],
     },
-    continuousSeats: {
+    seatCount: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
-        label: "Continuous Seats",
-        target: "continuousSeats",
+        label: "Seat Count",
+        target: "seatCount",
       },
       docs: [
         "If 'Same Physical Seat As' is set, This value will never exceed 'continous seats' of the physical seat", //

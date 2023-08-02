@@ -19,6 +19,10 @@ export const seatTypeSelector_edit: SelectorSchema = {
           name: "Seat",
           schema: "seatTypeAction_editSeat",
         },
+        {
+          name: "Ticket Types",
+          schema: "seatTypeAction_editTicketTypes",
+        },
       ],
     },
   },

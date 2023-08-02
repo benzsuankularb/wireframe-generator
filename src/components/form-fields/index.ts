@@ -1,4 +1,5 @@
 import { ColorPicker_FormField } from "./color-picker--form-field";
+import { CurrencyAmount_FormField } from "./currency-amount--form-field";
 import { DatePicker_FormField } from "./date-picker--form-field";
 import { EntityMultiPicker_FormField } from "./entity-multi-picker--form-field";
 import { EntityPicker_FormField } from "./entity-picker--form-field";
@@ -28,6 +29,7 @@ export const formFieldComponents = {
   EntityPicker_FormField,
   EntityMultiPicker_FormField,
   EntityTable_FormField,
+  CurrencyAmount_FormField,
 
   // Number_FormField,
 };
