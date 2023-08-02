@@ -2,14 +2,7 @@ import { SelectorSchema } from "../../framework/schemas";
 
 export const sessionSelector_programEdit: SelectorSchema = {
   type: "selector",
-  fields: {
-    event: {
-      typeDef: {
-        type: "entity",
-        fields: {},
-      },
-    },
-  },
+  fields: {},
   schemas: {
     sessionAction_editStatus: {},
     sessionAction_editProgram: {},

@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const branchAction_editGeneralInfo: ActionSchema = {
+export const seatTypeAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
     name: {
@@ -21,27 +21,12 @@ export const branchAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    brand: {
+    thumbnail: {
       typeDef: {
-        type: "entity",
-        class: "Brand",
-        displayFormat: "%name",
-        fields: {
-          name: {
-            type: "string",
-          },
-        },
-      },
-    },
-    company: {
-      typeDef: {
-        type: "entity",
-        class: "Company",
-        displayFormat: "%name",
-        fields: {
-          name: {
-            type: "string",
-          },
+        type: "image",
+        resolution: {
+          height: 256,
+          width: 256,
         },
       },
     },
@@ -63,18 +48,11 @@ export const branchAction_editGeneralInfo: ActionSchema = {
         target: "shortName",
       },
     },
-    brand: {
-      component: "EntityPicker_FormField",
+    thumbnail: {
+      component: "ImageUpload_FormField",
       attributes: {
-        label: "Brand",
-        target: "brand",
-      },
-    },
-    company: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Company",
-        target: "company",
+        label: "Thumbnail",
+        target: "thumbnail",
       },
     },
   },

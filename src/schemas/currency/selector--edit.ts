@@ -1,6 +1,6 @@
 import { SelectorSchema } from "../../framework/schemas";
 
-export const screenSelector_edit: SelectorSchema = {
+export const currencySelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
   schemas: {
@@ -14,15 +14,7 @@ export const screenSelector_edit: SelectorSchema = {
       sections: [
         {
           name: "General Info",
-          schema: "screenAction_editGeneralInfo",
-        },
-        {
-          name: "Sponsor",
-          schema: "screenAction_editSponsor",
-        },
-        {
-          name: "Layouts",
-          schema: "screenAction_editLayouts",
+          schema: "currencyAction_editGeneralInfo",
         },
       ],
     },

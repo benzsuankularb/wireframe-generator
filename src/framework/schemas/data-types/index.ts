@@ -39,6 +39,7 @@ export type TypeDefinition_Nullable = {
 
 export type TypeDefinition_Number = {
   type: "number";
+  step?: number;
   min?: number;
   max?: number;
 };

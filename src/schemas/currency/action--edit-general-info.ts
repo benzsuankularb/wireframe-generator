@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const branchAction_editGeneralInfo: ActionSchema = {
+export const currencyAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
     name: {
@@ -12,37 +12,27 @@ export const branchAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    shortName: {
+    unit: {
       typeDef: {
         type: "localized",
         locales: ["en", "th"],
         itemTypeDef: {
           type: "string",
+          max: 10,
+          min: 1,
         },
       },
     },
-    brand: {
+    symbol: {
       typeDef: {
-        type: "entity",
-        class: "Brand",
-        displayFormat: "%name",
-        fields: {
-          name: {
-            type: "string",
-          },
-        },
+        type: "string",
+        max: 1,
+        min: 1,
       },
     },
-    company: {
+    isDefault: {
       typeDef: {
-        type: "entity",
-        class: "Company",
-        displayFormat: "%name",
-        fields: {
-          name: {
-            type: "string",
-          },
-        },
+        type: "boolean",
       },
     },
   },
@@ -54,27 +44,32 @@ export const branchAction_editGeneralInfo: ActionSchema = {
         label: "Name",
         target: "name",
       },
+      samples: ["Thai Baht", "ไทยบาท"],
     },
-    shortName: {
+    unit: {
       component: "Text_FormField",
       size: "1/2",
       attributes: {
-        label: "Short Name",
-        target: "shortName",
+        label: "Unit",
+        target: "unit",
       },
+      samples: ["thb", "บาท"],
     },
-    brand: {
-      component: "EntityPicker_FormField",
+    symbol: {
+      component: "Text_FormField",
+      size: "1/2",
       attributes: {
-        label: "Brand",
-        target: "brand",
+        label: "Symbol",
+        target: "symbol",
       },
+      samples: ["฿"],
     },
-    company: {
-      component: "EntityPicker_FormField",
+    isDefault: {
+      component: "Toggle_FormField",
+      size: "1/2",
       attributes: {
-        label: "Company",
-        target: "company",
+        label: "Use as default currency",
+        target: "isDefault",
       },
     },
   },

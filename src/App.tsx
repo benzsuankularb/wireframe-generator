@@ -7,9 +7,11 @@ import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
 import { branchSchemas } from "./schemas/branch";
 import { contentSchemas } from "./schemas/content";
+import { currencySchemas } from "./schemas/currency";
 import { eventSchemas } from "./schemas/event";
 import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
+import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
 import { timingSchemas } from "./schemas/timing";
 
@@ -33,6 +35,8 @@ function App() {
           ...timingSchemas,
           ...sessionSchemas,
           ...screenZoneSchemas,
+          ...currencySchemas,
+          ...seatTypeSchemas,
         }}
       >
         <div className="h-screen">

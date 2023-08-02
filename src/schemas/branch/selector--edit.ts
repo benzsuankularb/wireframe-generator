@@ -2,17 +2,11 @@ import { SelectorSchema } from "../../framework/schemas";
 
 export const branchSelector_edit: SelectorSchema = {
   type: "selector",
-  fields: {
-    event: {
-      typeDef: {
-        type: "entity",
-        fields: {},
-      },
-    },
-  },
+  fields: {},
   schemas: {
     branchAction_editGeneralInfo: {},
     branchAction_editLocation: {},
+    branchAction_editCurrency: {},
     branchAction_editContract: {},
     branchAction_editScreens: {},
   },
@@ -31,6 +25,10 @@ export const branchSelector_edit: SelectorSchema = {
         {
           name: "Contract",
           schema: "branchAction_editContract",
+        },
+        {
+          name: "Currency",
+          schema: "branchAction_editCurrency",
         },
         {
           name: "Screens",
