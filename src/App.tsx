@@ -7,6 +7,10 @@ import { SchemaLayout } from "./framework/components/schema-layout";
 import { WireframeGeneratorConfig } from "./framework/contexts";
 import { branchSchemas } from "./schemas/branch";
 import { contentSchemas } from "./schemas/content";
+import { contentCategorySchemas } from "./schemas/content-category";
+import { contentFormatSchemas } from "./schemas/content-format";
+import { contentGenreSchemas } from "./schemas/content-genre";
+import { contentLanguageSchemas } from "./schemas/content-language";
 import { currencySchemas } from "./schemas/currency";
 import { eventSchemas } from "./schemas/event";
 import { screenSchemas } from "./schemas/screen";
@@ -39,6 +43,10 @@ function App() {
           ...currencySchemas,
           ...seatTypeSchemas,
           ...ticketTypeSchemas,
+          ...contentGenreSchemas,
+          ...contentFormatSchemas,
+          ...contentCategorySchemas,
+          ...contentLanguageSchemas,
         }}
       >
         <div className="h-screen">

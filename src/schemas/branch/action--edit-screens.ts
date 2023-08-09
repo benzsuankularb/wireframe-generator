@@ -22,6 +22,8 @@ export const branchAction_editScreens: ActionSchema = {
       attributes: {
         label: "Screens",
         target: "screens",
+        createAction: "screenAction_Create",
+        deleteAction: "screenAction_Delete",
       },
     },
   },

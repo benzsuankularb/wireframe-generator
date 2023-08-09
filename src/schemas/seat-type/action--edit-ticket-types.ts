@@ -23,6 +23,11 @@ export const seatTypeAction_editTicketTypes: ActionSchema = {
         createAction: "ticketTypeAction_create",
         deleteAction: "ticketTypeAction_delete",
       },
+      docs: [
+        "Always have a default ticket type on the top",
+        "The default ticket type could not be delete",
+        "Click the item to edit the ticket type",
+      ],
     },
   },
 };
