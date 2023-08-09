@@ -1,9 +1,9 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const ticketTypeAction_editPricing: ActionSchema = {
+export const ticketTypeAction_editConcessions: ActionSchema = {
   type: "action",
   fields: {
-    price: {
+    products: {
       typeDef: {
         type: "array",
         itemTypeDef: {
@@ -11,7 +11,7 @@ export const ticketTypeAction_editPricing: ActionSchema = {
           fields: {
             currency: {
               type: "entity",
-              class: "Currency",
+              class: "ConcessionProduct",
             },
             amount: {
               type: "number",
@@ -23,10 +23,10 @@ export const ticketTypeAction_editPricing: ActionSchema = {
   },
   layout: {
     price: {
-      component: "CurrencyAmount_FormField",
+      component: "EntityMultiPicker_FormField",
       attributes: {
-        label: "Price",
-        target: "price",
+        label: "Products",
+        target: "products",
       },
     },
   },

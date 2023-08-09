@@ -2,7 +2,7 @@ import { SelectorSchema } from "../../framework/schemas";
 
 export const eventSelector_edit: SelectorSchema = {
   type: "selector",
-  schemas: {
+  actions: {
     eventAction_editGeneralInfo: {},
     eventAction_editPeriod: {},
     eventAction_editSaleRestrictions: {},

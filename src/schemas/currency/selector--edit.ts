@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const currencySelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     screenAction_editGeneralInfo: {},
     screenAction_editSponsor: {},
     screenAction_editLayouts: {},

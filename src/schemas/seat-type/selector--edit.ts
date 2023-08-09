@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const seatTypeSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     seatTypeAction_editGeneralInfo: {},
     seatTypeAction_editSeat: {},
   },

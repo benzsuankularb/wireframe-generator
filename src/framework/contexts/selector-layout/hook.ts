@@ -10,7 +10,7 @@ export const useSelectorSchema = (name: string) => {
   const { selector: selectorName } = ctx;
   const selector = useSchema(selectorName) as SelectorSchema;
   const schema = useSchema(name);
-  const selectorSchema = (selector.schemas ?? {})[name];
+  const selectorSchema = (selector.actions ?? {})[name];
   const { exports, imports } = selectorSchema;
   return { schema, exports, imports };
 };

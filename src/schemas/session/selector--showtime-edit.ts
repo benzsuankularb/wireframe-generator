@@ -30,7 +30,7 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
     },
     // etc.
   },
-  schemas: {
+  actions: {
     sessionAction_editStatus: {},
     sessionAction_editProgram: {},
     sessionAction_editTiming: {},

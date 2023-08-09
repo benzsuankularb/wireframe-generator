@@ -3,9 +3,10 @@ import { SelectorSchema } from "../../framework/schemas";
 export const ticketTypeSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     ticketTypeAction_editGeneralInfo: {},
     ticketTypeAction_editPricing: {},
+    ticketTypeAction_editConcessions: {},
   },
   layout: {
     component: "EntityEdit",
@@ -18,6 +19,10 @@ export const ticketTypeSelector_edit: SelectorSchema = {
         {
           name: "Default Pricing",
           schema: "ticketTypeAction_editPricing",
+        },
+        {
+          name: "Concessions",
+          schema: "ticketTypeAction_editConcessions",
         },
       ],
     },

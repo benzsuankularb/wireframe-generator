@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const sessionSelector_programEdit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     sessionAction_editStatus: {},
     sessionAction_editProgram: {},
     sessionAction_editTiming: {},

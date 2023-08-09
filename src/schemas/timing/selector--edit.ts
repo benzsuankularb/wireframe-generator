@@ -2,7 +2,7 @@ import { SelectorSchema } from "../../framework/schemas";
 
 export const timingSelector_edit: SelectorSchema = {
   type: "selector",
-  schemas: {
+  actions: {
     timingAction_editSessions: {},
     timingAction_editInitialTime: {},
   },

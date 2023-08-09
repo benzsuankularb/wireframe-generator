@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const contentLanguageSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     contentLanguageAction_editGeneralInfo: {},
   },
   layout: {

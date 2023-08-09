@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const screenZoneSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     screenZoneAction_editGeneralInfo: {},
     screenZoneAction_editSaleRestrictions: {},
   },

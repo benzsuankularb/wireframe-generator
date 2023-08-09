@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const branchSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     branchAction_editGeneralInfo: {},
     branchAction_editLocation: {},
     branchAction_editCurrency: {},

@@ -10,7 +10,7 @@ export const contentSelector_edit: SelectorSchema = {
       },
     },
   },
-  schemas: {
+  actions: {
     contentAction_create: {}, //global
 
     contentAction_copy: {},

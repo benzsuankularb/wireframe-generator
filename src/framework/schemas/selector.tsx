@@ -4,10 +4,9 @@ import { TypeDefinition } from "./data-types";
 
 export type SelectorSchema = {
   type: "selector";
-  class?: string;
   globalFields?: { [name: string]: SelectorSchema_GlobalField };
   fields?: { [name: string]: SelectorSchema_Field };
-  schemas?: { [name: string]: SelectorSchema_Schema };
+  actions?: { [name: string]: SelectorSchema_Action };
   layout: SelectorSchema_Layout;
 };
 
@@ -23,7 +22,7 @@ export type SelectorSchema_Field = {
   samples?: string[];
 };
 
-export type SelectorSchema_Schema = {
+export type SelectorSchema_Action = {
   exports?: { [targetField: string]: string };
   imports?: { [targetField: string]: string };
 };

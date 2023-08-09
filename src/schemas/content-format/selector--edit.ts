@@ -3,7 +3,7 @@ import { SelectorSchema } from "../../framework/schemas";
 export const contentFormatSelector_edit: SelectorSchema = {
   type: "selector",
   fields: {},
-  schemas: {
+  actions: {
     contentFormatAction_editGeneralInfo: {},
   },
   layout: {
