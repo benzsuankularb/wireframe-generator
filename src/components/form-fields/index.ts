@@ -9,6 +9,7 @@ import { GeolocationPicker_FormField } from "./geolocation-picker--form-field";
 import { ImageMultiUpload_FormField } from "./image-multi-upload--form-field";
 import { ImageUpload_FormField } from "./image-upload--form-field";
 import { ReadOnly_FormField } from "./read-only--form-field";
+import { Selector_FormField } from "./selector--form-field";
 import { Text_FormField } from "./text--form-field";
 import { TextItems_FormField } from "./text-items--form-field";
 import { Toggle_FormField } from "./toggle--form-field";
@@ -30,6 +31,7 @@ export const formFieldComponents = {
   EntityMultiPicker_FormField,
   EntityTable_FormField,
   CurrencyAmount_FormField,
+  Selector_FormField,
 
   // Number_FormField,
 };

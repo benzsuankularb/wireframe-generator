@@ -13,6 +13,7 @@ import { contentGenreSchemas } from "./schemas/content-genre";
 import { contentLanguageSchemas } from "./schemas/content-language";
 import { currencySchemas } from "./schemas/currency";
 import { eventSchemas } from "./schemas/event";
+import { priceCardSchemas } from "./schemas/price-card";
 import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
 import { seatTypeSchemas } from "./schemas/seat-type";
@@ -47,6 +48,7 @@ function App() {
           ...contentFormatSchemas,
           ...contentCategorySchemas,
           ...contentLanguageSchemas,
+          ...priceCardSchemas,
         }}
       >
         <div className="h-screen">
