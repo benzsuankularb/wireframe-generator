@@ -9,12 +9,13 @@ export const ticketTypeAction_editConcessions: ActionSchema = {
         itemTypeDef: {
           type: "object",
           fields: {
-            currency: {
+            product: {
               type: "entity",
               class: "ConcessionProduct",
             },
             amount: {
               type: "number",
+              min: 1,
             },
           },
         },
@@ -22,8 +23,8 @@ export const ticketTypeAction_editConcessions: ActionSchema = {
     },
   },
   layout: {
-    price: {
-      component: "EntityMultiPicker_FormField",
+    products: {
+      component: "TicketTypeConcessions_FormField",
       attributes: {
         label: "Products",
         target: "products",

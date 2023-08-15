@@ -5,7 +5,7 @@ export const ticketTypeSelector_edit: SelectorSchema = {
   fields: {},
   actions: {
     ticketTypeAction_editGeneralInfo: {},
-    ticketTypeAction_editPricing: {},
+    ticketTypeAction_editServices: {},
     ticketTypeAction_editConcessions: {},
   },
   layout: {
@@ -17,8 +17,8 @@ export const ticketTypeSelector_edit: SelectorSchema = {
           schema: "ticketTypeAction_editGeneralInfo",
         },
         {
-          name: "Default Pricing",
-          schema: "ticketTypeAction_editPricing",
+          name: "Services",
+          schema: "ticketTypeAction_editServices",
         },
         {
           name: "Concessions",

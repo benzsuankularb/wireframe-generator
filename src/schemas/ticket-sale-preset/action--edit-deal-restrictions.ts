@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const priceCardAction_editDealRestrictions: ActionSchema = {
+export const ticketSalePresetAction_editDealRestrictions: ActionSchema = {
   type: "action",
   fields: {
     inclusive: {

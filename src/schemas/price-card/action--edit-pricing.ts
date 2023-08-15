@@ -11,22 +11,12 @@ export const priceCardAction_editPricing: ActionSchema = {
     },
   },
   layout: {
-    inheritFrom: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Inherit Price Card",
-        _wireframe: "Explained in Member Price Card Manager",
-      },
-      docs: [
-        "Price will fallback to this price card if there is no price overrided",
-      ],
-    },
     price: {
       component: "Selector_FormField",
       attributes: {
-        label: "Member Price Cards",
+        label: "Price Tiers",
         selector: "priceCardItemSelector_manager",
-        _wireframe: "Explained in Member Price Card Manager",
+        _wireframe: "Explained in Edit Price Tiers",
       },
     },
   },

@@ -20,6 +20,11 @@ export const ticketTypeAction_editGeneralInfo: ActionSchema = {
         displayFormat: "%name",
       },
     },
+    isDefault: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
   },
   layout: {
     name: {
@@ -43,6 +48,13 @@ export const ticketTypeAction_editGeneralInfo: ActionSchema = {
       attributes: {
         label: "Seat Type",
         target: "seatType",
+      },
+    },
+    isDefault: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Default for this Seat Type",
+        target: "isDefault",
       },
     },
   },

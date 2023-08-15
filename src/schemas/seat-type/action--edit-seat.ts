@@ -36,6 +36,7 @@ export const seatTypeAction_editSeat: ActionSchema = {
         label: "Seat Category",
         target: "seatCategory",
       },
+      docs: ["Indicate the physical seat. e.g. First Class"],
     },
     seatCount: {
       component: "Text_FormField",

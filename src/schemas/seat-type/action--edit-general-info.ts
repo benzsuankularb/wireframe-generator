@@ -21,15 +21,6 @@ export const seatTypeAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
-    thumbnail: {
-      typeDef: {
-        type: "image",
-        resolution: {
-          height: 256,
-          width: 256,
-        },
-      },
-    },
   },
   layout: {
     name: {
@@ -46,13 +37,6 @@ export const seatTypeAction_editGeneralInfo: ActionSchema = {
       attributes: {
         label: "Short Name",
         target: "shortName",
-      },
-    },
-    thumbnail: {
-      component: "ImageUpload_FormField",
-      attributes: {
-        label: "Thumbnail",
-        target: "thumbnail",
       },
     },
   },

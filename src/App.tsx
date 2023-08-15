@@ -20,6 +20,7 @@ import { seatCategorySchemas } from "./schemas/seat-category";
 import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
 import { sessionStatusSchemas } from "./schemas/session-status";
+import { ticketSalePresetSchemas } from "./schemas/ticket-sale-preset";
 import { ticketTypeSchemas } from "./schemas/ticket-type";
 import { timingSchemas } from "./schemas/timing";
 
@@ -53,6 +54,7 @@ function App() {
           ...priceCardSchemas,
           ...sessionStatusSchemas,
           ...seatCategorySchemas,
+          ...ticketSalePresetSchemas,
         }}
       >
         <div className="h-screen">

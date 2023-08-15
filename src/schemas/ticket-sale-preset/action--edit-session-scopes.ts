@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const priceCardAction_editSessionSuggestions: ActionSchema = {
+export const ticketSalePresetAction_editSessionScopes: ActionSchema = {
   type: "action",
   fields: {
     fromDate: {

@@ -1,6 +1,6 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const priceCardAction_editGeneralInfo: ActionSchema = {
+export const ticketSalePresetAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
     name: {
@@ -11,6 +11,12 @@ export const priceCardAction_editGeneralInfo: ActionSchema = {
     description: {
       typeDef: {
         type: "string",
+      },
+    },
+    backOfficeColor: {
+      typeDef: {
+        type: "string",
+        format: "color",
       },
     },
   },
@@ -30,6 +36,14 @@ export const priceCardAction_editGeneralInfo: ActionSchema = {
         multiline: true,
         label: "Description",
         target: "description",
+      },
+    },
+    backOfficeColor: {
+      component: "ColorPicker_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Back Office Color",
+        target: "backOfficeColor",
       },
     },
   },
