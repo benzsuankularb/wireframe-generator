@@ -29,6 +29,12 @@ export const sessionAction_editTicket: ActionSchema = {
         },
       },
     },
+    autoSeatSelection: {
+      allowBulk: true,
+      typeDef: {
+        type: "boolean",
+      },
+    },
   },
   layout: {
     layout: {
@@ -51,6 +57,16 @@ export const sessionAction_editTicket: ActionSchema = {
       docs: [
         "Default is empty", //
         "Unable to open the session if no price card",
+      ],
+    },
+    autoSeatSelection: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Auto Seat Selection",
+        target: "autoSeatSelection",
+      },
+      docs: [
+        "Turn this on will prevent user from selecting their seat's position",
       ],
     },
   },

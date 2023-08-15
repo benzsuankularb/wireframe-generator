@@ -8,6 +8,18 @@ export const ticketTypeAction_editGeneralInfo: ActionSchema = {
         type: "string",
       },
     },
+    shortName: {
+      typeDef: {
+        type: "string",
+      },
+    },
+    seatType: {
+      typeDef: {
+        type: "entity",
+        class: "SeatType",
+        displayFormat: "%name",
+      },
+    },
   },
   layout: {
     name: {
@@ -16,6 +28,21 @@ export const ticketTypeAction_editGeneralInfo: ActionSchema = {
       attributes: {
         label: "Name",
         target: "name",
+      },
+    },
+    shortName: {
+      component: "Text_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Short Name",
+        target: "shortName",
+      },
+    },
+    seatType: {
+      component: "EntityPicker_FormField",
+      attributes: {
+        label: "Seat Type",
+        target: "seatType",
       },
     },
   },

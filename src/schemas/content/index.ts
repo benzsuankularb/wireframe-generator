@@ -6,11 +6,9 @@ import { contentAction_editEvent } from "./action--edit-event";
 import { contentAction_editFormat } from "./action--edit-format";
 import { contentAction_editGeneralInfo } from "./action--edit-general-info";
 import { contentAction_editMedia } from "./action--edit-media";
-import { contentAction_editSaleRestrictions } from "./action--edit-sale-restrictions";
 import { contentSelector_edit } from "./selector--edit";
 
 export const contentSchemas = {
-  contentAction_editSaleRestrictions,
   contentAction_editActivation,
   contentAction_editEvent,
   contentAction_editCastCrews,

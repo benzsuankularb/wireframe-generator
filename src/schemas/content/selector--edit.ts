@@ -20,18 +20,9 @@ export const contentSelector_edit: SelectorSchema = {
     contentAction_editContentInfo: {},
     contentAction_editDuration: {},
     contentAction_editFormat: {},
-    contentAction_editEvent: {
-      exports: {
-        event: "event",
-      },
-    },
+    contentAction_editEvent: {},
     contentAction_editMedia: {},
     contentAction_editCastCrews: {},
-    contentAction_editSaleRestrictions: {
-      imports: {
-        event: "event",
-      },
-    },
   },
   layout: {
     component: "EntityEdit",
@@ -80,10 +71,6 @@ export const contentSelector_edit: SelectorSchema = {
         {
           name: "Cast & Crews",
           schema: "contentAction_editCastCrews",
-        },
-        {
-          name: "Sale Restrictions",
-          schema: "contentAction_editSaleRestrictions",
         },
       ],
     },

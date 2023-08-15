@@ -16,8 +16,10 @@ import { eventSchemas } from "./schemas/event";
 import { priceCardSchemas } from "./schemas/price-card";
 import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
+import { seatCategorySchemas } from "./schemas/seat-category";
 import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
+import { sessionStatusSchemas } from "./schemas/session-status";
 import { ticketTypeSchemas } from "./schemas/ticket-type";
 import { timingSchemas } from "./schemas/timing";
 
@@ -49,6 +51,8 @@ function App() {
           ...contentCategorySchemas,
           ...contentLanguageSchemas,
           ...priceCardSchemas,
+          ...sessionStatusSchemas,
+          ...seatCategorySchemas,
         }}
       >
         <div className="h-screen">

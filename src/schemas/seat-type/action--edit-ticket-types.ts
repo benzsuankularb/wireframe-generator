@@ -20,8 +20,6 @@ export const seatTypeAction_editTicketTypes: ActionSchema = {
       attributes: {
         label: "Ticket Types",
         target: "ticketTypes",
-        createAction: "ticketTypeAction_create",
-        deleteAction: "ticketTypeAction_delete",
       },
       docs: [
         "Always have a default ticket type on the top",

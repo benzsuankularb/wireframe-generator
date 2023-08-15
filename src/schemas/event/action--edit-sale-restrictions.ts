@@ -4,7 +4,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
   type: "action",
   fields: {
     audience: {
-      required: true,
+      allowBulk: true,
       typeDef: {
         type: "entity",
         displayFormat: "%name",
@@ -16,7 +16,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     memberTypes: {
-      required: true,
+      allowBulk: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -53,7 +53,7 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     saleChannels: {
-      required: true,
+      allowBulk: true,
       typeDef: {
         type: "nullable",
         typeDef: {
@@ -72,30 +72,31 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       },
     },
     startTime: {
+      allowBulk: true,
       typeDef: {
         type: "dateTime",
       },
     },
     endTime: {
+      allowBulk: true,
       typeDef: {
         type: "dateTime",
-      },
-    },
-    allowSeatSelection: {
-      typeDef: {
-        type: "boolean",
       },
     },
   },
   layout: {
     audience: {
-      component: "EntityPicker_FormField",
+      component: "ValuePicker_FormField",
       size: "1/2",
       attributes: {
         label: "Audience",
+        values: {
+          none: "None",
+          memberOnly: "Member Only",
+          everyone: "Everyone",
+        },
         target: "audience",
       },
-      samples: ["No One", "Member Only", "Everyone"],
     },
     memberTypes: {
       component: "EntityMultiPicker_FormField",
@@ -116,23 +117,6 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
         "Empty means all member types are restricted (Same as no one)",
       ],
     },
-    promotions: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Promotions",
-        searchable: true,
-        target: "promotions",
-      },
-      docs: ["Empty means no promotions restricted"],
-    },
-    allowComplementary: {
-      component: "Toggle_FormField",
-      attributes: {
-        label: "Allow Complementary Promotions",
-        searchable: true,
-        target: "allowComplementary",
-      },
-    },
     saleChannels: {
       component: "EntityMultiPicker_FormField",
       attributes: {
@@ -142,10 +126,19 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
       docs: ["Empty means no sale channel restricted"],
       samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
     },
+    paymentChannels: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Payment Channels",
+        target: "paymentChannels",
+      },
+      docs: ["Empty means no payment channel restricted"],
+      samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
+    },
     startTime: {
       component: "DatePicker_FormField",
       attributes: {
-        label: "Sale Start",
+        label: "Start Time",
         target: "startTime",
       },
       docs: ["Empty means no starting sale time restricted"],
@@ -153,21 +146,10 @@ export const eventAction_editSaleRestrictions: ActionSchema = {
     endTime: {
       component: "DatePicker_FormField",
       attributes: {
-        label: "Sale End",
+        label: "End Time",
         target: "endTime",
       },
       docs: ["Empty means no ending sale time restricted"],
-    },
-    allowSeatSelection: {
-      component: "Toggle_FormField",
-      attributes: {
-        label: "Allow Seat Selection",
-        target: "allowSeatSelection",
-      },
-      docs: [
-        "Default is on",
-        "User couldn't select their seat's position this if turned off",
-      ],
     },
   },
 };

@@ -7,7 +7,7 @@ export const sessionAction_editSaleRestrictions: ActionSchema = {
       allowBulk: true,
       typeDef: {
         type: "string",
-        enum: ["none", "event", "content"],
+        enum: ["none", "event"],
       },
     },
     audience: {
@@ -90,12 +90,6 @@ export const sessionAction_editSaleRestrictions: ActionSchema = {
         type: "dateTime",
       },
     },
-    allowSeatSelection: {
-      allowBulk: true,
-      typeDef: {
-        type: "boolean",
-      },
-    },
   },
   layout: {
     source: {
@@ -147,23 +141,6 @@ export const sessionAction_editSaleRestrictions: ActionSchema = {
         "Empty means all member types are restricted (Same as no one)",
       ],
     },
-    promotions: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Promotions",
-        searchable: true,
-        target: "promotions",
-      },
-      docs: ["Empty means no promotions restricted"],
-    },
-    allowComplementary: {
-      component: "Toggle_FormField",
-      attributes: {
-        label: "Allow Complementary Promotions",
-        searchable: true,
-        target: "allowComplementary",
-      },
-    },
     saleChannels: {
       component: "EntityMultiPicker_FormField",
       attributes: {
@@ -173,10 +150,19 @@ export const sessionAction_editSaleRestrictions: ActionSchema = {
       docs: ["Empty means no sale channel restricted"],
       samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
     },
+    paymentChannels: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Payment Channels",
+        target: "paymentChannels",
+      },
+      docs: ["Empty means no payment channel restricted"],
+      samples: ["Disney (Partner)", "Website (Online)", "Kiosk (Front)"],
+    },
     startTime: {
       component: "DatePicker_FormField",
       attributes: {
-        label: "Sale Start",
+        label: "Start Time",
         target: "startTime",
       },
       docs: ["Empty means no starting sale time restricted"],
@@ -184,21 +170,10 @@ export const sessionAction_editSaleRestrictions: ActionSchema = {
     endTime: {
       component: "DatePicker_FormField",
       attributes: {
-        label: "Sale End",
+        label: "End Time",
         target: "endTime",
       },
       docs: ["Empty means no ending sale time restricted"],
-    },
-    allowSeatSelection: {
-      component: "Toggle_FormField",
-      attributes: {
-        label: "Allow Seat Selection",
-        target: "allowSeatSelection",
-      },
-      docs: [
-        "Default is on",
-        "User couldn't select their seat's position this if turned off",
-      ],
     },
   },
 };
