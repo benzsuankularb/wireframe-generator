@@ -14,12 +14,14 @@ import { contentLanguageSchemas } from "./schemas/content-language";
 import { currencySchemas } from "./schemas/currency";
 import { eventSchemas } from "./schemas/event";
 import { priceCardSchemas } from "./schemas/price-card";
+import { priceCardTierSchemas } from "./schemas/price-card-tier";
 import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
 import { seatCategorySchemas } from "./schemas/seat-category";
 import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
 import { sessionStatusSchemas } from "./schemas/session-status";
+import { ticketPriceTierSchemas } from "./schemas/ticket-price-tier";
 import { ticketSalePresetSchemas } from "./schemas/ticket-sale-preset";
 import { ticketTypeSchemas } from "./schemas/ticket-type";
 import { timingSchemas } from "./schemas/timing";
@@ -52,9 +54,11 @@ function App() {
           ...contentCategorySchemas,
           ...contentLanguageSchemas,
           ...priceCardSchemas,
+          ...priceCardTierSchemas,
           ...sessionStatusSchemas,
           ...seatCategorySchemas,
           ...ticketSalePresetSchemas,
+          ...ticketPriceTierSchemas,
         }}
       >
         <div className="h-screen">
