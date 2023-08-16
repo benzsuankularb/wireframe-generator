@@ -1,5 +1,6 @@
 import { branchComponents } from "./branch";
 import { contentComponents } from "./content";
+import { dealComponents } from "./deal";
 import { screenComponents } from "./screen";
 import { sessionComponents } from "./session";
 import { ticketSalePresetComponents } from "./ticket-sale-preset";
@@ -14,4 +15,5 @@ export const pageSpecificComponents = {
   ...sessionComponents,
   ...screenComponents,
   ...branchComponents,
+  ...dealComponents,
 };

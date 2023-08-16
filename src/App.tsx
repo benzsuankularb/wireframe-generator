@@ -12,6 +12,8 @@ import { contentFormatSchemas } from "./schemas/content-format";
 import { contentGenreSchemas } from "./schemas/content-genre";
 import { contentLanguageSchemas } from "./schemas/content-language";
 import { currencySchemas } from "./schemas/currency";
+import { dealSchemas } from "./schemas/deal";
+import { dealBenefitSchemas } from "./schemas/deal-benefit";
 import { eventSchemas } from "./schemas/event";
 import { priceCardSchemas } from "./schemas/price-card";
 import { priceCardTierSchemas } from "./schemas/price-card-tier";
@@ -59,6 +61,8 @@ function App() {
           ...seatCategorySchemas,
           ...ticketSalePresetSchemas,
           ...ticketPriceTierSchemas,
+          ...dealSchemas,
+          ...dealBenefitSchemas,
         }}
       >
         <div className="h-screen">
