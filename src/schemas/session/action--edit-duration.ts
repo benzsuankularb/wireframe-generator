@@ -97,13 +97,6 @@ export const sessionAction_editDuration: ActionSchema = {
         label: "Total Duration",
         suffix: "Mins",
       },
-      source: {
-        presession: "preSessionDuration",
-        break: "breakDuration",
-        preBreak: "preBreakDuration",
-        cleanup: "cleanupDuration",
-        content: "contentDuration",
-      },
     },
   },
 };

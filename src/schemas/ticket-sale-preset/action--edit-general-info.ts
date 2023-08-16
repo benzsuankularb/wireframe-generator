@@ -19,6 +19,11 @@ export const ticketSalePresetAction_editGeneralInfo: ActionSchema = {
         format: "color",
       },
     },
+    autoSeatAllocation: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
   },
   layout: {
     name: {
@@ -43,6 +48,13 @@ export const ticketSalePresetAction_editGeneralInfo: ActionSchema = {
       size: "1/2",
       attributes: {
         label: "Back Office Color",
+        target: "backOfficeColor",
+      },
+    },
+    autoSeatAllocation: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Auto Seat Allocation",
         target: "backOfficeColor",
       },
     },
