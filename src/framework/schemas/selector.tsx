@@ -18,6 +18,7 @@ export type SelectorSchema_GlobalField = {
 
 export type SelectorSchema_Field = {
   typeDef: TypeDefinition;
+  external?: boolean;
   docs?: string[];
   samples?: string[];
 };

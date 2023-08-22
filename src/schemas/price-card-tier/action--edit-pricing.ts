@@ -8,11 +8,6 @@ export const priceCardTierAction_editPricing: ActionSchema = {
         type: "number",
       },
     },
-    excludeChannelFee: {
-      typeDef: {
-        type: "boolean",
-      },
-    },
   },
   layout: {
     price: {
@@ -22,13 +17,6 @@ export const priceCardTierAction_editPricing: ActionSchema = {
         target: "price",
       },
       docs: ["Error if sum of all price break down is not equal to the price"],
-    },
-    excludeChannelFee: {
-      component: "Toggle_FormField",
-      attributes: {
-        label: "Exclude Channel Fee form Revenue",
-        target: "excludeChannelFee",
-      },
     },
   },
 };

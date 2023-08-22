@@ -30,6 +30,23 @@ export const dealAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
+    partner: {
+      typeDef: {
+        type: "entity",
+        class: "Partner",
+        displayFormat: "%name",
+        fields: {
+          name: {
+            type: "string",
+          },
+        },
+      },
+    },
+    ticketCount: {
+      typeDef: {
+        type: "number",
+      },
+    },
   },
   layout: {
     name: {
@@ -54,6 +71,22 @@ export const dealAction_editGeneralInfo: ActionSchema = {
         multiline: true,
         label: "Description",
         target: "description",
+      },
+    },
+    partner: {
+      component: "EntityPicker_FormField",
+      attributes: {
+        label: "Partner",
+        target: "partner",
+      },
+      docs: ["Allow empty"],
+    },
+    ticketCount: {
+      component: "Text_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Ticket Count",
+        target: "ticketCount",
       },
     },
   },

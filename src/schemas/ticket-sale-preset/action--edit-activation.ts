@@ -8,14 +8,27 @@ export const ticketSalePresetAction_editActivation: ActionSchema = {
         type: "boolean",
       },
     },
+    showOnShowtimeManager: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
   },
   layout: {
-    name: {
+    enable: {
       component: "Toggle_FormField",
       size: "1/2",
       attributes: {
         label: "Enable",
         target: "enable",
+      },
+    },
+    showOnShowtimeManager: {
+      component: "Toggle_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Show on Showtime Manager",
+        target: "showOnShowtimeManager",
       },
     },
   },

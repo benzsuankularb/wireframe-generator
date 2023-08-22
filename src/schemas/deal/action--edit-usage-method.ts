@@ -64,6 +64,13 @@ export const dealAction_editUsageMethod: ActionSchema = {
         label: "Method",
         target: "method",
       },
+      samples: [
+        "Default",
+        "Promo Code",
+        "Voucher Code",
+        "Credit Card",
+        "Credit Card Point Redemption",
+      ],
     },
     promoCodes: {
       component: "EntityMultiPicker_FormField",

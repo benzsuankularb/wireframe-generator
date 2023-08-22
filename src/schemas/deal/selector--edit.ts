@@ -25,10 +25,6 @@ export const dealSelector_edit: SelectorSchema = {
           schema: "dealAction_editGeneralInfo",
         },
         {
-          name: "Configurations",
-          schema: "dealAction_editConfigurations",
-        },
-        {
           name: "Usage Method",
           schema: "dealAction_editUsageMethod",
         },
@@ -37,7 +33,7 @@ export const dealSelector_edit: SelectorSchema = {
           schema: "dealAction_editUsageRestrictions",
         },
         {
-          name: "Revenue Subsidise",
+          name: "Revenue Subsidization",
           schema: "dealAction_editRevenueSubsidise",
         },
         {

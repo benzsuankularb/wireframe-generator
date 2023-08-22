@@ -3,13 +3,12 @@ import { ActionSchema } from "../../framework/schemas";
 export const priceCardTierAction_editPriceBreakdown: ActionSchema = {
   type: "action",
   fields: {
-    ticket: {
+    deductChannelFee: {
       typeDef: {
-        type: "entity",
-        class: "PriceCard",
+        type: "boolean",
       },
     },
-    services: {
+    ticket: {
       typeDef: {
         type: "entity",
         class: "PriceCard",
@@ -23,26 +22,27 @@ export const priceCardTierAction_editPriceBreakdown: ActionSchema = {
     },
   },
   layout: {
+    deductChannelFee: {
+      component: "Toggle_FormField",
+      attributes: {
+        label: "Deduct Channel Fee Before Revenue Share",
+        target: "excludeChannelFee",
+      },
+    },
     ticket: {
       component: "Text_FormField",
       attributes: {
         label: "Ticket",
         target: "ticket",
+        suffix: "$",
       },
-    },
-    services: {
-      component: "Text_FormField",
-      attributes: {
-        label: "Services",
-        target: "services",
-      },
-      docs: ["Disable if the ticket types have no service"],
     },
     concessions: {
       component: "Text_FormField",
       attributes: {
         label: "Concessions",
         target: "concessions",
+        suffix: "$",
       },
       docs: ["Disable if the ticket type have no concession"],
     },
