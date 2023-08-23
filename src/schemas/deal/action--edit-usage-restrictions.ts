@@ -13,6 +13,63 @@ export const dealAction_editUsageRestrictions: ActionSchema = {
         type: "dateTime",
       },
     },
+    dateOfWeeks: {
+      typeDef: {
+        type: "array",
+        itemTypeDef: {
+          type: "string",
+          enum: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        },
+      },
+    },
+    timeOfDates: {
+      typeDef: {
+        type: "array",
+        itemTypeDef: {
+          type: "number", // interval
+        },
+      },
+    },
+    usagePerMonth: {
+      typeDef: {
+        type: "number",
+      },
+    },
+    usagePerContent: {
+      typeDef: {
+        type: "number",
+      },
+    },
+    creditCardVendors: {
+      typeDef: {
+        type: "array",
+        itemTypeDef: {
+          type: "entity",
+          class: "CreditCardVender",
+          displayFormat: "%name",
+          fields: {
+            name: {
+              type: "string",
+            },
+          },
+        },
+      },
+    },
+    memberGroups: {
+      typeDef: {
+        type: "array",
+        itemTypeDef: {
+          type: "entity",
+          class: "MemberGroup",
+          displayFormat: "%name",
+          fields: {
+            name: {
+              type: "string",
+            },
+          },
+        },
+      },
+    },
     memberTypes: {
       typeDef: {
         type: "array",

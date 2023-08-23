@@ -3,17 +3,6 @@ import { ActionSchema } from "../../framework/schemas";
 export const dealAction_editUsageMethod: ActionSchema = {
   type: "action",
   fields: {
-    method: {
-      typeDef: {
-        type: "string",
-        enum: [
-          "default",
-          "credit card vendor",
-          "promo code",
-          "coupon code", //
-        ],
-      },
-    },
     promoCodes: {
       typeDef: {
         type: "array",
@@ -29,12 +18,12 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
-    couponCodes: {
+    voucherCodes: {
       typeDef: {
         type: "array",
         itemTypeDef: {
           type: "entity",
-          class: "CouponCode",
+          class: "VoucherCode",
           displayFormat: "%name",
           fields: {
             name: {
@@ -44,10 +33,10 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
-    creditCardVendor: {
+    creditCardProvider: {
       typeDef: {
         type: "entity",
-        class: "CreditCardVendor",
+        class: "CreditCardProvider",
         displayFormat: "%name",
         fields: {
           name: {
@@ -58,43 +47,37 @@ export const dealAction_editUsageMethod: ActionSchema = {
     },
   },
   layout: {
-    method: {
-      component: "ValuePicker_FormField",
-      attributes: {
-        label: "Method",
-        target: "method",
-      },
-      samples: [
-        "Default",
-        "Promo Code",
-        "Voucher Code",
-        "Credit Card",
-        "Credit Card Point Redemption",
-      ],
-    },
     promoCodes: {
       component: "EntityMultiPicker_FormField",
       attributes: {
+        toggle: "usePromoCodes",
         label: "Promo Codes",
         target: "promoCodes",
       },
-      docs: ["Only visible when usage method is `Promo Code`"],
     },
-    couponCodes: {
+    voucherCodes: {
       component: "EntityMultiPicker_FormField",
       attributes: {
+        toggle: "useVoucherCodes",
         label: "Coupon Codes",
-        target: "couponCodes",
+        target: "voucherCodes",
       },
-      docs: ["Only visible when usage method is `Coupon Code`"],
     },
-    creditCardVendor: {
+    pointRedemption: {
       component: "EntityPicker_FormField",
       attributes: {
-        label: "Credit Card Vendor",
-        target: "creditCardVendor",
+        toggle: "usePointRedemption",
+        label: "Point Redemption",
+        target: "pointRedemption",
       },
-      docs: ["Only visible when usage method is `Credit Card Vendor`"],
+    },
+    creditCardProvider: {
+      component: "EntityPicker_FormField",
+      attributes: {
+        toggle: "useCreditCardProvider",
+        label: "Credit Card Provider",
+        target: "creditCardProvider",
+      },
     },
   },
 };

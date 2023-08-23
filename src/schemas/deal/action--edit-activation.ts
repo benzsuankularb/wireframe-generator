@@ -8,6 +8,11 @@ export const dealAction_editActivation: ActionSchema = {
         type: "boolean",
       },
     },
+    public: {
+      typeDef: {
+        type: "boolean",
+      },
+    },
   },
   layout: {
     name: {
@@ -16,6 +21,14 @@ export const dealAction_editActivation: ActionSchema = {
       attributes: {
         label: "Enable",
         target: "enable",
+      },
+    },
+    public: {
+      component: "Toggle_FormField",
+      size: "1/2",
+      attributes: {
+        label: "Public",
+        target: "public",
       },
     },
   },
