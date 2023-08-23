@@ -6,7 +6,7 @@ export const ticketTypeSelector_edit: SelectorSchema = {
   actions: {
     ticketTypeAction_editGeneralInfo: {},
     ticketTypeAction_editServices: {},
-    ticketTypeAction_editConcessions: {},
+    ticketTypeAction_editBreakdown: {},
   },
   layout: {
     component: "EntityEdit",
@@ -17,12 +17,8 @@ export const ticketTypeSelector_edit: SelectorSchema = {
           schema: "ticketTypeAction_editGeneralInfo",
         },
         {
-          name: "Services",
-          schema: "ticketTypeAction_editServices",
-        },
-        {
-          name: "Concessions",
-          schema: "ticketTypeAction_editConcessions",
+          name: "Breakdown",
+          schema: "ticketTypeAction_editBreakdown",
         },
       ],
     },

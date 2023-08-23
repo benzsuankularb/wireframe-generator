@@ -36,7 +36,7 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
     sessionAction_editTiming: {},
     sessionAction_editDuration: {},
     sessionAction_editConfig: {},
-    sessionAction_editSale: {},
+    sessionAction_editSaleRestrictions: {},
   },
   layout: {
     component: "EntityEdit",
@@ -63,8 +63,8 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
           schema: "sessionAction_editConfig",
         },
         {
-          name: "Sale",
-          schema: "sessionAction_editSale",
+          name: "Session Restrictions",
+          schema: "sessionAction_editSaleRestrictions",
         },
       ],
     },
