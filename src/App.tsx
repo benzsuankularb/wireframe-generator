@@ -24,7 +24,6 @@ import { seatTypeSchemas } from "./schemas/seat-type";
 import { sessionSchemas } from "./schemas/session";
 import { sessionStatusSchemas } from "./schemas/session-status";
 import { ticketPriceTierSchemas } from "./schemas/ticket-price-tier";
-import { ticketSalePresetSchemas } from "./schemas/ticket-sale-preset";
 import { ticketTypeSchemas } from "./schemas/ticket-type";
 import { timingSchemas } from "./schemas/timing";
 
@@ -59,7 +58,6 @@ function App() {
           ...priceCardTierSchemas,
           ...sessionStatusSchemas,
           ...seatCategorySchemas,
-          ...ticketSalePresetSchemas,
           ...ticketPriceTierSchemas,
           ...dealSchemas,
           ...dealBenefitSchemas,
