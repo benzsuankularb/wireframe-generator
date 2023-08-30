@@ -22,37 +22,14 @@ export const dealAction_editUsageRestrictions: ActionSchema = {
         },
       },
     },
-    timeOfDates: {
-      typeDef: {
-        type: "array",
-        itemTypeDef: {
-          type: "number", // interval
-        },
-      },
-    },
-    usagePerMonth: {
+    startDayTime: {
       typeDef: {
         type: "number",
       },
     },
-    usagePerContent: {
+    endDayTime: {
       typeDef: {
         type: "number",
-      },
-    },
-    creditCardVendors: {
-      typeDef: {
-        type: "array",
-        itemTypeDef: {
-          type: "entity",
-          class: "CreditCardVender",
-          displayFormat: "%name",
-          fields: {
-            name: {
-              type: "string",
-            },
-          },
-        },
       },
     },
     memberGroups: {
@@ -145,20 +122,56 @@ export const dealAction_editUsageRestrictions: ActionSchema = {
         },
       },
     },
-  },
-  layout: {
-    startTime: {
-      component: "DatePicker_FormField",
-      attributes: {
-        label: "Start Time",
-        target: "startTime",
+    priceTiers: {
+      typeDef: {
+        type: "array",
+        itemTypeDef: {
+          type: "entity",
+          class: "PriceTiers",
+          displayFormat: "%name",
+          fields: {
+            name: {
+              type: "string",
+            },
+          },
+        },
       },
     },
-    endTime: {
-      component: "DatePicker_FormField",
+  },
+  layout: {
+    dateRange: {
+      component: "Range_FormField",
       attributes: {
-        label: "End Time",
-        target: "endTime",
+        label: "Effective Date",
+        targets: {
+          start: "startTime",
+          end: "endTime",
+        },
+      },
+    },
+    dateOfWeeks: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Date of Weeks",
+        target: "dateOfWeeks",
+      },
+    },
+    timeRange: {
+      component: "Range_FormField",
+      attributes: {
+        label: "Time Range",
+        targets: {
+          start: "startDayTime",
+          end: "endDayTime",
+        },
+        type: "time",
+      },
+    },
+    memberGroups: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Member Groups",
+        target: "memberGroups",
       },
     },
     memberTypes: {
@@ -166,6 +179,13 @@ export const dealAction_editUsageRestrictions: ActionSchema = {
       attributes: {
         label: "Member Types",
         target: "memberTypes",
+      },
+    },
+    priceTiers: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Price Tiers",
+        target: "priceTiers",
       },
     },
     saleChannels: {

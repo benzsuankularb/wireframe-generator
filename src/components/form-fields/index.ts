@@ -8,6 +8,8 @@ import { FreeText_FormField } from "./free-text--form-field";
 import { GeolocationPicker_FormField } from "./geolocation-picker--form-field";
 import { ImageMultiUpload_FormField } from "./image-multi-upload--form-field";
 import { ImageUpload_FormField } from "./image-upload--form-field";
+import { Number_FormField } from "./number--form-field";
+import { Range_FormField } from "./range--form-field";
 import { ReadOnly_FormField } from "./read-only--form-field";
 import { Selector_FormField } from "./selector--form-field";
 import { Text_FormField } from "./text--form-field";
@@ -20,6 +22,7 @@ export const formFieldComponents = {
   Text_FormField, // Support i18n, multiple
   FreeText_FormField, // Wyswig
   Toggle_FormField,
+  Range_FormField,
   ValuePicker_FormField, // Radio, dropdown
   ImageUpload_FormField, // Support i18n
   ImageMultiUpload_FormField, // Support i18n
@@ -32,6 +35,5 @@ export const formFieldComponents = {
   EntityTable_FormField,
   CurrencyAmount_FormField,
   Selector_FormField,
-
-  // Number_FormField,
+  Number_FormField,
 };

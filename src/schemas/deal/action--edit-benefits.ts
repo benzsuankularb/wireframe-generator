@@ -7,9 +7,8 @@ export const dealAction_editBenefits: ActionSchema = {
     price: {
       component: "Selector_FormField",
       attributes: {
-        label: "Benefits",
-        selector: "dealBenefitSelector_Manager",
-        _wireframe: "Explained in Edit Deal Benefits",
+        label: "Breakdown",
+        _wireframe: "Explained in Deal Breakdown",
       },
     },
   },

@@ -18,7 +18,7 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
-    voucherCodes: {
+    vouchers: {
       typeDef: {
         type: "array",
         itemTypeDef: {
@@ -45,38 +45,53 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
+    privilege: {
+      typeDef: {
+        type: "entity",
+        class: "Privilege",
+        displayFormat: "%name",
+        fields: {
+          name: {
+            type: "string",
+          },
+        },
+      },
+    },
   },
   layout: {
     promoCodes: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        toggle: "usePromoCodes",
         label: "Promo Codes",
         target: "promoCodes",
       },
     },
-    voucherCodes: {
+    vouchers: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        toggle: "useVoucherCodes",
-        label: "Coupon Codes",
-        target: "voucherCodes",
+        label: "Vouchers",
+        target: "vouchers",
       },
     },
-    pointRedemption: {
-      component: "EntityPicker_FormField",
+    pointRedemptions: {
+      component: "EntityMultiPicker_FormField",
       attributes: {
-        toggle: "usePointRedemption",
         label: "Point Redemption",
-        target: "pointRedemption",
+        target: "pointRedemptions",
       },
     },
     creditCardProvider: {
-      component: "EntityPicker_FormField",
+      component: "EntityMultiPicker_FormField",
       attributes: {
-        toggle: "useCreditCardProvider",
         label: "Credit Card Provider",
         target: "creditCardProvider",
+      },
+    },
+    Privilege: {
+      component: "EntityMultiPicker_FormField",
+      attributes: {
+        label: "Privilege",
+        target: "privilege",
       },
     },
   },

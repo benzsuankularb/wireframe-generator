@@ -30,6 +30,12 @@ export const dealAction_editGeneralInfo: ActionSchema = {
         },
       },
     },
+    category: {
+      typeDef: {
+        type: "string",
+        enum: ["deal", "discount"],
+      },
+    },
     partner: {
       typeDef: {
         type: "entity",
@@ -40,11 +46,6 @@ export const dealAction_editGeneralInfo: ActionSchema = {
             type: "string",
           },
         },
-      },
-    },
-    ticketCount: {
-      typeDef: {
-        type: "number",
       },
     },
   },
@@ -73,6 +74,17 @@ export const dealAction_editGeneralInfo: ActionSchema = {
         target: "description",
       },
     },
+    category: {
+      component: "ValuePicker_FormField",
+      attributes: {
+        label: "Category",
+        target: "category",
+        values: {
+          deal: "Deal",
+          discount: "Discount",
+        },
+      },
+    },
     partner: {
       component: "EntityPicker_FormField",
       attributes: {
@@ -80,14 +92,6 @@ export const dealAction_editGeneralInfo: ActionSchema = {
         target: "partner",
       },
       docs: ["Allow empty"],
-    },
-    ticketCount: {
-      component: "Text_FormField",
-      size: "1/2",
-      attributes: {
-        label: "Ticket Count",
-        target: "ticketCount",
-      },
     },
   },
 };

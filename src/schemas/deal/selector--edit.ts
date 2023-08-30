@@ -9,6 +9,7 @@ export const dealSelector_edit: SelectorSchema = {
     dealAction_editConfigurations: {},
     dealAction_editUsageMethod: {},
     dealAction_editUsageRestrictions: {},
+    dealAction_editUsageQuota: {},
     dealAction_editRevenueSubsidise: {},
     dealAction_editBenefits: {},
   },
@@ -29,15 +30,15 @@ export const dealSelector_edit: SelectorSchema = {
           schema: "dealAction_editUsageMethod",
         },
         {
-          name: "Usage Restrictions",
+          name: "Restrictions",
           schema: "dealAction_editUsageRestrictions",
         },
         {
-          name: "Revenue Subsidization",
-          schema: "dealAction_editRevenueSubsidise",
+          name: "Quota",
+          schema: "dealAction_editUsageQuota",
         },
         {
-          name: "Benefits",
+          name: "Breakdown",
           schema: "dealAction_editBenefits",
         },
       ],
