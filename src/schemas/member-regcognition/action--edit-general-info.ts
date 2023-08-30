@@ -1,23 +1,24 @@
 import { ActionSchema } from "../../framework/schemas";
 
-export const ticketTypeAction_editGeneralInfo: ActionSchema = {
+export const memberRegcognitionAction_editGeneralInfo: ActionSchema = {
   type: "action",
   fields: {
     name: {
       typeDef: {
-        type: "string",
+        type: "localized",
+        locales: ["en", "th"],
+        itemTypeDef: {
+          type: "string",
+        },
       },
     },
     shortName: {
       typeDef: {
-        type: "string",
-      },
-    },
-    seatType: {
-      typeDef: {
-        type: "entity",
-        class: "SeatType",
-        displayFormat: "%name",
+        type: "localized",
+        locales: ["en", "th"],
+        itemTypeDef: {
+          type: "string",
+        },
       },
     },
   },
@@ -36,13 +37,6 @@ export const ticketTypeAction_editGeneralInfo: ActionSchema = {
       attributes: {
         label: "Short Name",
         target: "shortName",
-      },
-    },
-    seatType: {
-      component: "EntityPicker_FormField",
-      attributes: {
-        label: "Seat Type",
-        target: "seatType",
       },
     },
   },

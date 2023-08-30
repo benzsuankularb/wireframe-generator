@@ -13,10 +13,14 @@ import { contentGenreSchemas } from "./schemas/content-genre";
 import { contentLanguageSchemas } from "./schemas/content-language";
 import { currencySchemas } from "./schemas/currency";
 import { dealSchemas } from "./schemas/deal";
-import { dealBenefitSchemas } from "./schemas/deal-benefit";
 import { eventSchemas } from "./schemas/event";
+import { memberPackageSchemas } from "./schemas/member-package";
+import { memberRegcognitionSchemas } from "./schemas/member-regcognition";
+import { memberTypeSchemas } from "./schemas/member-type";
+import { pointProviderSchemas } from "./schemas/point-provider";
 import { priceCardSchemas } from "./schemas/price-card";
 import { priceCardTierSchemas } from "./schemas/price-card-tier";
+import { privilegeSchemas } from "./schemas/privilege";
 import { screenSchemas } from "./schemas/screen";
 import { screenZoneSchemas } from "./schemas/screen-zone";
 import { seatCategorySchemas } from "./schemas/seat-category";
@@ -60,7 +64,11 @@ function App() {
           ...seatCategorySchemas,
           ...ticketPriceTierSchemas,
           ...dealSchemas,
-          ...dealBenefitSchemas,
+          ...privilegeSchemas,
+          ...memberTypeSchemas,
+          ...memberRegcognitionSchemas,
+          ...memberPackageSchemas,
+          ...pointProviderSchemas,
         }}
       >
         <div className="h-screen">

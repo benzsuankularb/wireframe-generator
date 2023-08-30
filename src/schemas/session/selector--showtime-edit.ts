@@ -28,7 +28,6 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
         ],
       },
     },
-    // etc.
   },
   actions: {
     sessionAction_editStatus: {},
@@ -51,6 +50,10 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
           schema: "sessionAction_editProgram",
         },
         {
+          name: "Theater",
+          schema: "sessionAction_editConfig",
+        },
+        {
           name: "Timing",
           schema: "sessionAction_editTiming",
         },
@@ -59,11 +62,7 @@ export const sessionSelector_showtimeEdit: SelectorSchema = {
           schema: "sessionAction_editDuration",
         },
         {
-          name: "Configurations",
-          schema: "sessionAction_editConfig",
-        },
-        {
-          name: "Session Restrictions",
+          name: "Sale Restrictions",
           schema: "sessionAction_editSaleRestrictions",
         },
       ],

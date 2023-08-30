@@ -33,7 +33,7 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
-    creditCardProvider: {
+    creditCardProviders: {
       typeDef: {
         type: "entity",
         class: "CreditCardProvider",
@@ -45,7 +45,7 @@ export const dealAction_editUsageMethod: ActionSchema = {
         },
       },
     },
-    privilege: {
+    privileges: {
       typeDef: {
         type: "entity",
         class: "Privilege",
@@ -76,22 +76,22 @@ export const dealAction_editUsageMethod: ActionSchema = {
     pointRedemptions: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        label: "Point Redemption",
+        label: "Point Redemptions",
         target: "pointRedemptions",
       },
     },
-    creditCardProvider: {
+    creditCardProviders: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        label: "Credit Card Provider",
-        target: "creditCardProvider",
+        label: "Credit Card Providers",
+        target: "creditCardProviders",
       },
     },
-    Privilege: {
+    privileges: {
       component: "EntityMultiPicker_FormField",
       attributes: {
-        label: "Privilege",
-        target: "privilege",
+        label: "Privileges",
+        target: "privileges",
       },
     },
   },
