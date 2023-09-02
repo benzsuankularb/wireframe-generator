@@ -13,19 +13,19 @@ export const branchSelector_create: SelectorSchema = {
       sections: [
         {
           name: "General Info",
-          fieldPrefix: "generalInfo_",
+          layoutItemPrefix: "generalInfo_",
         },
         {
           name: "Location",
-          fieldPrefix: "location_",
+          layoutItemPrefix: "location_",
         },
         {
           name: "Contract",
-          fieldPrefix: "contract_",
+          layoutItemPrefix: "contract_",
         },
         {
           name: "Currency",
-          fieldPrefix: "currency_",
+          layoutItemPrefix: "currency_",
         },
       ],
     },
