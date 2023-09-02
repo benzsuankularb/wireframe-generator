@@ -1,5 +1,8 @@
 import { ActionSchema } from "../../framework/schemas";
+import { branchAction_editContract } from "./action--edit-contract";
+import { branchAction_editCurrency } from "./action--edit-currency";
 import { branchAction_editGeneralInfo } from "./action--edit-general-info";
+import { branchAction_editLocation } from "./action--edit-location";
 
 function transformFieldsFromActionSchema(
   action: ActionSchema,
@@ -32,35 +35,17 @@ export const branchAction_create: ActionSchema = {
       branchAction_editGeneralInfo,
       "generalInfo_"
     ),
-    ...transformFieldsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "contract_"
-    ),
-    ...transformFieldsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "location_"
-    ),
-    ...transformFieldsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "currency_"
-    ),
+    ...transformFieldsFromActionSchema(branchAction_editContract, "contract_"),
+    ...transformFieldsFromActionSchema(branchAction_editLocation, "location_"),
+    ...transformFieldsFromActionSchema(branchAction_editCurrency, "currency_"),
   },
   layout: {
     ...transformLayoutsFromActionSchema(
       branchAction_editGeneralInfo,
       "generalInfo_"
     ),
-    ...transformLayoutsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "contract_"
-    ),
-    ...transformLayoutsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "location_"
-    ),
-    ...transformLayoutsFromActionSchema(
-      branchAction_editGeneralInfo,
-      "currency_"
-    ),
+    ...transformLayoutsFromActionSchema(branchAction_editContract, "contract_"),
+    ...transformLayoutsFromActionSchema(branchAction_editLocation, "location_"),
+    ...transformLayoutsFromActionSchema(branchAction_editCurrency, "currency_"),
   },
 };
