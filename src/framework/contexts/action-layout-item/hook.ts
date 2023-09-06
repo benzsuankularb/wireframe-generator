@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { ActionSchema } from "@sf-cinema/backoffice-schema";
 import { useContext } from "react";
 import { useSchema } from "..";
-import { ActionSchema } from "../../schemas";
 import { InternalActionLayoutItemContext } from "./context";
 
 export const useLayoutItem = () => {

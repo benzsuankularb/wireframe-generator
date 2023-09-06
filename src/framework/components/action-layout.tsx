@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import { ActionSchema } from "@sf-cinema/backoffice-schema";
 import { createElement } from "react";
 import { ActionLayoutItemContext } from "../contexts";
 import { useComponent, useSchema } from "../contexts/wireframe-generator/hook";
-import { ActionSchema } from "../schemas";
 
 export function ActionLayout({ schema: schemaName }: { schema: string }) {
   const schema = useSchema(schemaName);

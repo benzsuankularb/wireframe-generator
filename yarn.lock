@@ -443,6 +443,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@sf-cinema/backoffice-schema@1.0.8":
+  version "1.0.8"
+  resolved "https://npm.pkg.github.com/download/@sf-cinema/backoffice-schema/1.0.8/9570db0c300161324da2523a82c42bca6aaa2f5c#9570db0c300161324da2523a82c42bca6aaa2f5c"
+  integrity sha512-ILFRY81JlNP9F21/h18McqCabGmD2Nara+H+is8mKkdcZxwEvDxsUj29jy5qHM71EeYcwGR07WWfocCxTCFCoQ==
+
 "@types/json-schema@^7.0.9":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.12.tgz#d70faba7039d5fca54c83c7dbab41051d2b6f6cb"

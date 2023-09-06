@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { SelectorSchema } from "@sf-cinema/backoffice-schema";
 import { useContext } from "react";
 import { useSchema } from "..";
-import { SelectorSchema } from "../../schemas";
 import { InternalSelectorLayoutContext } from "./context";
 
 export const useSelectorSchema = (name: string) => {
