@@ -2,7 +2,7 @@ import { useActionField } from "../../../framework/contexts";
 import { LayoutItemRemark } from "../../common/layout-item-remark";
 import Image from "./image.png";
 
-export function TextItems_FormField({
+export function StringTable_FormField({
   label,
   target,
 }: {

@@ -1,4 +1,7 @@
-import { draftBackOfficeSchemas } from "@sf-cinema/backoffice-schema";
+import {
+  backOfficeSchemas,
+  draftBackOfficeSchemas,
+} from "@sf-cinema/backoffice-schema";
 import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
 import { formFieldComponents } from "./components/form-fields";
@@ -9,7 +12,7 @@ import { WireframeGeneratorConfig } from "./framework/contexts";
 
 function App() {
   const urlParams = new URLSearchParams(window.location.search);
-  const schema = urlParams.get("schema") ?? "eventSelector_edit";
+  const schema = urlParams.get("schema") ?? "contentSelector_edit";
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong</div>}>
@@ -19,7 +22,10 @@ function App() {
           ...selectorComponents,
           ...pageSpecificComponents,
         }}
-        schemas={draftBackOfficeSchemas}
+        schemas={{
+          ...draftBackOfficeSchemas,
+          ...backOfficeSchemas,
+        }}
       >
         <div className="h-screen">
           <SchemaLayout schema={schema} />

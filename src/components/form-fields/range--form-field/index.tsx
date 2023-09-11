@@ -16,10 +16,8 @@ export function Range_FormField({
   };
   type?: "time" | "default";
 }) {
-  console.log(targets.start);
   const { fieldSchema } = useActionField(targets.start);
   const dataType = fieldSchema.typeDef.type;
-  console.log(">>>>>>>>>>>>>>>>>>>..");
 
   let image = "";
   if (type === "time") {
