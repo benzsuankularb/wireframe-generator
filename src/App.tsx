@@ -1,7 +1,4 @@
-import {
-  backOfficeSchemas,
-  draftBackOfficeSchemas,
-} from "@sf-cinema/backoffice-schema";
+import { draftBackOfficeSchemas, schemas } from "@sf-cinema/backoffice-schema";
 import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
 import { formFieldComponents } from "./components/form-fields";
@@ -24,7 +21,7 @@ function App() {
         }}
         schemas={{
           ...draftBackOfficeSchemas,
-          ...backOfficeSchemas,
+          ...schemas,
         }}
       >
         <div className="h-screen">
