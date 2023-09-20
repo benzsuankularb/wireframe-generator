@@ -1,3 +1,4 @@
+import { Button_FormField } from "./button--form-field";
 import { ColorPicker_FormField } from "./color-picker--form-field";
 import { DatePicker_FormField } from "./date-picker--form-field";
 import { EntityMultiPicker_FormField } from "./entity-multi-picker--form-field";
@@ -12,14 +13,14 @@ import { ObjectTable_FormField } from "./object-table--form-field";
 import { Range_FormField } from "./range--form-field";
 import { ReadOnly_FormField } from "./read-only--form-field";
 import { Selector_FormField } from "./selector--form-field";
+import { StringTable_FormField } from "./string-table--form-field";
 import { Text_FormField } from "./text--form-field";
-import { StringTable_FormField } from "./text-items--form-field";
 import { Toggle_FormField } from "./toggle--form-field";
 import { ValuePicker_FormField } from "./value-picker--form-field";
 
 export const formFieldComponents = {
   // Base function supported
-  // localized, label, visibleOnTarget
+  // localized, label, visibleOnTarget, readOnly
 
   // Single value
   DatePicker_FormField,
@@ -30,7 +31,6 @@ export const formFieldComponents = {
   ImageUpload_FormField, // i18n
   GeolocationPicker_FormField,
   ColorPicker_FormField,
-  ReadOnly_FormField,
   EntityPicker_FormField,
   Number_FormField,
 
@@ -38,10 +38,12 @@ export const formFieldComponents = {
   ImageMultiUpload_FormField, // i18n
   Range_FormField, // number, date, time
   EntityMultiPicker_FormField, // nullable
-  ObjectTable_FormField, // orderable, nullable, sortByField, groupByField, uniqueFields, value displays, value suggestion
+  ObjectTable_FormField, // orderable, nullable, group, sortColumn, uniqueColumn, valueDisplays, valueSuggestion
   StringTable_FormField, // orderable, nullable
   EntityTable_FormField, // orderable, nullable
 
   // Others
+  ReadOnly_FormField, // TODO Every component should be able to readonly
   Selector_FormField,
+  Button_FormField,
 };

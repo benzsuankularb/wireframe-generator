@@ -2,6 +2,7 @@ import { LayoutItemRemark } from "../../common/layout-item-remark";
 import cinema_exchangeRates from "./image-cinema-exchange-rates.png";
 import cinema_sponsors from "./image-cinema-sponsors.png";
 import content_castCrews from "./image-content-cast-crew.png";
+import deal_creditCardBins from "./image-deal-credit-card-bins.png";
 import deal_points from "./image-deal-points.png";
 import deal_quotaPeriods from "./image-deal-quote-period.png";
 import defaultImage from "./image.png";
@@ -15,17 +16,20 @@ export function ObjectTable_FormField({
 }) {
   let image: string = defaultImage;
   switch (_wireframe) {
-    case "deal_quotaPeriods":
-      image = deal_quotaPeriods;
-      break;
     case "content_castCrews":
       image = content_castCrews;
       break;
     case "cinema_exchangeRates":
       image = cinema_exchangeRates;
       break;
+    case "deal_quotaPeriods":
+      image = deal_quotaPeriods;
+      break;
     case "deal_points":
       image = deal_points;
+      break;
+    case "deal_creditCardBins":
+      image = deal_creditCardBins;
       break;
     case "cinema_sponsors":
       image = cinema_sponsors;
